@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38262AF2D041F980086CB1E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262AE2D041F980086CB1E /* Alert.swift */; };
+		D38262B32D04337F0086CB1E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */; };
 		D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */; };
 		D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */; };
-		D3FA96AF2D0119400058C8D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AE2D0119400058C8D1 /* ViewController.swift */; };
 		D3FA96B22D0119400058C8D1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96B12D0119400058C8D1 /* Base */; };
 		D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96B32D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld */; };
 		D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96B62D0119420058C8D1 /* Assets.xcassets */; };
@@ -17,6 +18,15 @@
 		D3FA96C52D0119420058C8D1 /* Momtaz_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96C42D0119420058C8D1 /* Momtaz_IOSTests.swift */; };
 		D3FA96CF2D0119420058C8D1 /* Momtaz_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96CE2D0119420058C8D1 /* Momtaz_IOSUITests.swift */; };
 		D3FA96D12D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96D02D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift */; };
+		D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96DE2D011EC30058C8D1 /* Constants.swift */; };
+		D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */; };
+		D3FA96E42D0120690058C8D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E32D0120690058C8D1 /* LoginViewController.swift */; };
+		D3FA96E62D0120800058C8D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */; };
+		D3FA96E82D0120900058C8D1 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */; };
+		D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */; };
+		D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */; };
+		D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */; };
+		D3FC92902D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D38262AE2D041F980086CB1E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		D3FA96A72D0119400058C8D1 /* Momtaz-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Momtaz-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3FA96AE2D0119400058C8D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3FA96B12D0119400058C8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3FA96B42D0119400058C8D1 /* Momtaz_IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Momtaz_IOS.xcdatamodel; sourceTree = "<group>"; };
 		D3FA96B62D0119420058C8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +62,15 @@
 		D3FA96CA2D0119420058C8D1 /* Momtaz-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Momtaz-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA96CE2D0119420058C8D1 /* Momtaz_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Momtaz_IOSUITests.swift; sourceTree = "<group>"; };
 		D3FA96D02D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Momtaz_IOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3FA96DE2D011EC30058C8D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extentions.swift"; sourceTree = "<group>"; };
+		D3FA96E32D0120690058C8D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
+		D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadedView.swift; sourceTree = "<group>"; };
+		D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollViewWithKeyboard+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D38262B02D0433540086CB1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA96E32D0120690058C8D1 /* LoginViewController.swift */,
+				D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */,
+				D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D38262B12D04335B0086CB1E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		D3FA969E2D0119400058C8D1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +139,11 @@
 		D3FA96A92D0119400058C8D1 /* Momtaz-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA96E92D01228E0058C8D1 /* Custom Components */,
+				D3FA96E22D0120440058C8D1 /* Authntication */,
+				D3FA96DD2D011EA70058C8D1 /* Utilites */,
 				D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */,
 				D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */,
-				D3FA96AE2D0119400058C8D1 /* ViewController.swift */,
 				D3FA96B02D0119400058C8D1 /* Main.storyboard */,
 				D3FA96B62D0119420058C8D1 /* Assets.xcassets */,
 				D3FA96B82D0119420058C8D1 /* LaunchScreen.storyboard */,
@@ -128,6 +168,36 @@
 				D3FA96D02D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift */,
 			);
 			path = "Momtaz-IOSUITests";
+			sourceTree = "<group>";
+		};
+		D3FA96DD2D011EA70058C8D1 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA96DE2D011EC30058C8D1 /* Constants.swift */,
+				D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */,
+				D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */,
+				D38262AE2D041F980086CB1E /* Alert.swift */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		D3FA96E22D0120440058C8D1 /* Authntication */ = {
+			isa = PBXGroup;
+			children = (
+				D38262B12D04335B0086CB1E /* View Model */,
+				D38262B02D0433540086CB1E /* View */,
+			);
+			path = Authntication;
+			sourceTree = "<group>";
+		};
+		D3FA96E92D01228E0058C8D1 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */,
+				D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */,
+				D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */,
+			);
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +307,7 @@
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
 				D3FA96BA2D0119420058C8D1 /* Base in Resources */,
 				D3FA96B22D0119400058C8D1 /* Base in Resources */,
+				D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FA96AF2D0119400058C8D1 /* ViewController.swift in Sources */,
+				D38262B32D04337F0086CB1E /* AuthenticationViewModel.swift in Sources */,
+				D3FA96E42D0120690058C8D1 /* LoginViewController.swift in Sources */,
+				D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */,
+				D3FC92902D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift in Sources */,
+				D3FA96E62D0120800058C8D1 /* SignUpViewController.swift in Sources */,
+				D3FA96E82D0120900058C8D1 /* ForgetPasswordViewController.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
+				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
+				D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */,
+				D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */,
+				D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
