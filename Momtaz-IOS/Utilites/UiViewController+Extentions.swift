@@ -16,14 +16,23 @@ extension UIViewController{
         
     }
     static func instantiat(name: StoryboardEnum) -> Self {
-        let storyBoard = UIStoryboard(name: name.rawValue, bundle: nil)
-        return storyBoard.instantiateViewController(identifier: identifier) as! Self
+        switch name {
+                case .xib:
+                    // For XIB-based View Controllers
+                    return Self(nibName: identifier, bundle: nil)
+                default:
+                    // For Storyboard-based View Controllers
+                    let storyboard = UIStoryboard(name: name.rawValue, bundle: nil)
+                    return storyboard.instantiateViewController(identifier: identifier) as! Self
+                }
     }
     enum StoryboardEnum: String {
-        case main = "Main"
-        case Order = "Auth"
+        case Login = "LoginViewController"
+        case SignUp = "SignUpViewController"
+        case ForgetPassword = "ForgetPasswordViewController"
         case NearbyCafes = "workAgenda"
         case Reserve = "Reservation"
+        case xib
         
     }
 }

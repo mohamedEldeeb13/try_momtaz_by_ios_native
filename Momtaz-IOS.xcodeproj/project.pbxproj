@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A921F616429728009B315848 /* Pods_Momtaz_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */; };
+		D30FD6CF2D04AFBF00F7AAC7 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */; };
+		D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */; };
+		D31C8DF72D060F7D00A8EA1A /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */; };
+		D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */; };
+		D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */; };
+		D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */; };
 		D38262AF2D041F980086CB1E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262AE2D041F980086CB1E /* Alert.swift */; };
-		D38262B32D04337F0086CB1E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */; };
+		D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */; };
+		D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */; };
+		D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01AFB2D05D786008AE4A0 /* SignUpViewController.swift */; };
+		D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */; };
+		D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */; };
+		D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */; };
 		D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */; };
 		D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */; };
-		D3FA96B22D0119400058C8D1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96B12D0119400058C8D1 /* Base */; };
 		D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96B32D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld */; };
 		D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96B62D0119420058C8D1 /* Assets.xcassets */; };
 		D3FA96BA2D0119420058C8D1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96B92D0119420058C8D1 /* Base */; };
@@ -20,13 +31,9 @@
 		D3FA96D12D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96D02D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift */; };
 		D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96DE2D011EC30058C8D1 /* Constants.swift */; };
 		D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */; };
-		D3FA96E42D0120690058C8D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E32D0120690058C8D1 /* LoginViewController.swift */; };
-		D3FA96E62D0120800058C8D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */; };
-		D3FA96E82D0120900058C8D1 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */; };
 		D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */; };
 		D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */; };
 		D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */; };
-		D3FC92902D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +54,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2894F7C6E0246F0D8E727EC8 /* Pods-Momtaz-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momtaz-IOS.release.xcconfig"; path = "Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momtaz_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExcepression.swift; sourceTree = "<group>"; };
+		D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D38262AE2D041F980086CB1E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D3A01AFB2D05D786008AE4A0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		D3FA96A72D0119400058C8D1 /* Momtaz-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Momtaz-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3FA96B12D0119400058C8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3FA96B42D0119400058C8D1 /* Momtaz_IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Momtaz_IOS.xcdatamodel; sourceTree = "<group>"; };
 		D3FA96B62D0119420058C8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3FA96B92D0119420058C8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,13 +83,10 @@
 		D3FA96D02D0119420058C8D1 /* Momtaz_IOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Momtaz_IOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3FA96DE2D011EC30058C8D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extentions.swift"; sourceTree = "<group>"; };
-		D3FA96E32D0120690058C8D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadedView.swift; sourceTree = "<group>"; };
-		D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollViewWithKeyboard+Extention.swift"; sourceTree = "<group>"; };
+		E62FF1B1E5691D04DDCB1038 /* Pods-Momtaz-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momtaz-IOS.debug.xcconfig"; path = "Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A921F616429728009B315848 /* Pods_Momtaz_IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,22 +115,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D38262B02D0433540086CB1E /* View */ = {
+		3CB050C458E2DF7558958007 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3FA96E32D0120690058C8D1 /* LoginViewController.swift */,
-				D3FA96E52D0120800058C8D1 /* SignUpViewController.swift */,
-				D3FA96E72D0120900058C8D1 /* ForgetPasswordViewController.swift */,
+				E62FF1B1E5691D04DDCB1038 /* Pods-Momtaz-IOS.debug.xcconfig */,
+				2894F7C6E0246F0D8E727EC8 /* Pods-Momtaz-IOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C48E5A0422E68D2DC1E66AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3A01AF02D05D5BD008AE4A0 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01AF42D05D5EA008AE4A0 /* View Model */,
+				D3A01AF32D05D5E5008AE4A0 /* View */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		D3A01AF12D05D5CC008AE4A0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01AFA2D05D762008AE4A0 /* View Model */,
+				D3A01AF92D05D75B008AE4A0 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D3A01AF22D05D5D4008AE4A0 /* Forget Password */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01AFF2D05D873008AE4A0 /* View Model */,
+				D3A01B002D05D87B008AE4A0 /* View */,
+			);
+			path = "Forget Password";
+			sourceTree = "<group>";
+		};
+		D3A01AF32D05D5E5008AE4A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */,
+				D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		D38262B12D04335B0086CB1E /* View Model */ = {
+		D3A01AF42D05D5EA008AE4A0 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				D38262B22D04337F0086CB1E /* AuthenticationViewModel.swift */,
+				D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D3A01AF92D05D75B008AE4A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01AFB2D05D786008AE4A0 /* SignUpViewController.swift */,
+				D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3A01AFA2D05D762008AE4A0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D3A01AFF2D05D873008AE4A0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D3A01B002D05D87B008AE4A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */,
+				D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D3FA969E2D0119400058C8D1 = {
@@ -123,6 +216,8 @@
 				D3FA96C32D0119420058C8D1 /* Momtaz-IOSTests */,
 				D3FA96CD2D0119420058C8D1 /* Momtaz-IOSUITests */,
 				D3FA96A82D0119400058C8D1 /* Products */,
+				3CB050C458E2DF7558958007 /* Pods */,
+				6C48E5A0422E68D2DC1E66AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +239,6 @@
 				D3FA96DD2D011EA70058C8D1 /* Utilites */,
 				D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */,
 				D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */,
-				D3FA96B02D0119400058C8D1 /* Main.storyboard */,
 				D3FA96B62D0119420058C8D1 /* Assets.xcassets */,
 				D3FA96B82D0119420058C8D1 /* LaunchScreen.storyboard */,
 				D3FA96BB2D0119420058C8D1 /* Info.plist */,
@@ -175,8 +269,10 @@
 			children = (
 				D3FA96DE2D011EC30058C8D1 /* Constants.swift */,
 				D3FA96E02D011F490058C8D1 /* UiViewController+Extentions.swift */,
-				D3FC928F2D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift */,
 				D38262AE2D041F980086CB1E /* Alert.swift */,
+				D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */,
+				D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */,
+				D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -184,8 +280,9 @@
 		D3FA96E22D0120440058C8D1 /* Authntication */ = {
 			isa = PBXGroup;
 			children = (
-				D38262B12D04335B0086CB1E /* View Model */,
-				D38262B02D0433540086CB1E /* View */,
+				D3A01AF22D05D5D4008AE4A0 /* Forget Password */,
+				D3A01AF12D05D5CC008AE4A0 /* SignUp */,
+				D3A01AF02D05D5BD008AE4A0 /* LogIn */,
 			);
 			path = Authntication;
 			sourceTree = "<group>";
@@ -196,6 +293,7 @@
 				D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */,
 				D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */,
 				D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */,
+				D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -207,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3FA96D42D0119420058C8D1 /* Build configuration list for PBXNativeTarget "Momtaz-IOS" */;
 			buildPhases = (
+				03F7CAD721755839185042D1 /* [CP] Check Pods Manifest.lock */,
 				D3FA96A32D0119400058C8D1 /* Sources */,
 				D3FA96A42D0119400058C8D1 /* Frameworks */,
 				D3FA96A52D0119400058C8D1 /* Resources */,
+				D04CB8168C9F1555ACB5C83D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,9 +404,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */,
+				D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */,
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
 				D3FA96BA2D0119420058C8D1 /* Base in Resources */,
-				D3FA96B22D0119400058C8D1 /* Base in Resources */,
+				D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */,
 				D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,23 +429,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03F7CAD721755839185042D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Momtaz-IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D04CB8168C9F1555ACB5C83D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3FA96A32D0119400058C8D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38262B32D04337F0086CB1E /* AuthenticationViewModel.swift in Sources */,
-				D3FA96E42D0120690058C8D1 /* LoginViewController.swift in Sources */,
 				D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */,
-				D3FC92902D02F7B600F57849 /* UIScrollViewWithKeyboard+Extention.swift in Sources */,
-				D3FA96E62D0120800058C8D1 /* SignUpViewController.swift in Sources */,
-				D3FA96E82D0120900058C8D1 /* ForgetPasswordViewController.swift in Sources */,
+				D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */,
+				D30FD6CF2D04AFBF00F7AAC7 /* CustomNavigationController.swift in Sources */,
+				D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
+				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,
 				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
+				D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */,
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
+				D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */,
+				D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */,
+				D31C8DF72D060F7D00A8EA1A /* ValidationError.swift in Sources */,
 				D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */,
 				D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */,
+				D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */,
 				D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,14 +529,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D3FA96B02D0119400058C8D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3FA96B12D0119400058C8D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D3FA96B82D0119420058C8D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -521,6 +661,7 @@
 		};
 		D3FA96D52D0119420058C8D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62FF1B1E5691D04DDCB1038 /* Pods-Momtaz-IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -531,7 +672,6 @@
 				INFOPLIST_FILE = "Momtaz-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,6 +689,7 @@
 		};
 		D3FA96D62D0119420058C8D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2894F7C6E0246F0D8E727EC8 /* Pods-Momtaz-IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -559,7 +700,6 @@
 				INFOPLIST_FILE = "Momtaz-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
