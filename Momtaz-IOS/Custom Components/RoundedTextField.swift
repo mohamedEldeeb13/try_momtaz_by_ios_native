@@ -33,7 +33,7 @@ class RoundedTextField: UIView {
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.border_width = 0.1
-        self.border_color = .gray
+        self.border_color = .lightGrey
         self.prefix_icon = nil
 
         self.addSubview(self.contentView)

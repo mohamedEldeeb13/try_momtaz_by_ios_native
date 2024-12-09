@@ -21,27 +21,11 @@ class LoginViewController: UIViewController{
         super.viewDidLoad()
         setupIntailUI()
     }
-
     
     //MARK: setup intail design
     
     private func setupIntailUI(){
-        setupLogoInNavigationBar()
         setupLoginButton()
-    }
-    
-    private func setupLogoInNavigationBar(){
-        let myView = UIView()
-        let imageView = UIImageView(image: .momtazLogo)
-        imageView.contentMode = .scaleAspectFill // Adjust as per your requirement
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        myView.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: myView.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: myView.bottomAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: myView.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: myView.trailingAnchor).isActive = true
-        
-        self.navigationItem.titleView = myView
     }
     // prepare login button
     private func setupLoginButton(){

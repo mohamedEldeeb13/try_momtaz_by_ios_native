@@ -26,44 +26,18 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setupIntailUI()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let navigationController = self.navigationController as? BaseNavigationController { navigationController.setLogoInTitleView()
+        }
+    }
     
     //MARK: Design
-    
     private func setupIntailUI(){
-        setupLogoInNavigationBar()
         setupSignupButtonUI()
         setupTermsAndConditionsButtonUI()
     }
     
-    private func setupLogoInNavigationBar(){
-        let myView = UIView()
-        let imageView = UIImageView(image: .momtazLogo)
-        imageView.contentMode = .scaleAspectFill // Adjust as per your requirement
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        myView.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: myView.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: myView.bottomAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: myView.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: myView.trailingAnchor).isActive = true
-        
-        self.navigationItem.titleView = myView
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
-        appearance.backButtonAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.clear]
-        
-        appearance.setBackIndicatorImage(UIImage(systemName: "arrowshape.left.circle.fill"), transitionMaskImage: UIImage(systemName: "arrowshape.left.circle.fill"))
-        
-        appearance.shadowImage = UIImage()
-        appearance.shadowColor = .clear
-
-        
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.tintColor = .red
-
-    }
     // prepare login button
     private func setupSignupButtonUI(){
         signUpButtonUI.layer.cornerRadius = signUpButtonUI.frame.height / 2
@@ -100,7 +74,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func alreadyHaveAccountButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     

@@ -133,7 +133,6 @@ struct ValidationService {
     static func validate(termesAgreed: Bool) throws -> Bool{
         guard termesAgreed else {
             throw ValidationError.terms
-            return false
         }
         return true
     }

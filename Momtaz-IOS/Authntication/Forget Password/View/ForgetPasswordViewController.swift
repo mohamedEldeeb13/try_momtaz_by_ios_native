@@ -19,22 +19,12 @@ class ForgetPasswordViewController: UIViewController {
 //        addTapGestureToDismissKeyboard()
         setupForgetPasswordButtonUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        addKeyboardObservers(scrollView: scrollViewController )
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let navigationController = self.navigationController as? BaseNavigationController { navigationController.setLogoInTitleView()
+        }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-//        removeKeyboardObservers()
-    }
-    
 
-//    @IBAction func backButtonTapped(_ sender: Any) {
-//        self.dismiss(animated: true)
-//    }
-    
     @IBAction func changePasswordButtonTapped(_ sender: Any) {
     }
     
