@@ -7,5 +7,10 @@ target 'Momtaz-IOS' do
 
   
 pod 'IQKeyboardManagerSwift'
+pod 'RxSwift', '6.8.0'
+pod 'RxCocoa', '6.8.0'
+pod 'Alamofire'
+pod 'SDWebImage'
+pod 'ProgressHUD'
 
 end

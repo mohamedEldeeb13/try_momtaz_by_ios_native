@@ -49,6 +49,7 @@ enum ValidationError: Error {
     case emptyConfirmNewPassword
     case emptyConfirmPassword
     case notMatchPasswords
+    case confirmPasswordNotMatchPassword
     case terms
 
     //MARK: - Locations -
@@ -203,6 +204,8 @@ extension ValidationError: LocalizedError {
             return "Please enter confirm password field.".validationLocalized
         case .notMatchPasswords:
             return "Please, Enter valid Password\nMinimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character".validationLocalized
+        case .confirmPasswordNotMatchPassword:
+            return "Confirm password not match password"
         case .terms:
             return "Please read and agree our terms and conditions first".validationLocalized
 

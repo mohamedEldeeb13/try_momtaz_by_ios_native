@@ -126,7 +126,7 @@ struct ValidationService {
             throw ValidationError.emptyConfirmPassword
         }
         guard newPassword == confirmPassword else {
-            throw ValidationError.notMatchPasswords
+            throw ValidationError.confirmPasswordNotMatchPassword
         }
         return newPassword
     }

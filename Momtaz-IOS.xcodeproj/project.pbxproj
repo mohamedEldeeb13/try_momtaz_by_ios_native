@@ -21,6 +21,21 @@
 		D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */; };
 		D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */; };
 		D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */; };
+		D3C17B2B2D10804D0018BDE5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2A2D10804D0018BDE5 /* NetworkManagerProtocol.swift */; };
+		D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2C2D10805A0018BDE5 /* NetworkManager.swift */; };
+		D3C17B2F2D10806C0018BDE5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2E2D10806C0018BDE5 /* URLs.swift */; };
+		D3C17B312D10807C0018BDE5 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B302D10807C0018BDE5 /* UserDefaults.swift */; };
+		D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B342D10C2340018BDE5 /* LogInResponse.swift */; };
+		D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */; };
+		D3DC39D92D134DE300E98447 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39D82D134DE300E98447 /* MainTabBar.swift */; };
+		D3DC39E92D134F0C00E98447 /* StudentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DC39E82D134F0C00E98447 /* StudentsViewController.xib */; };
+		D3DC39EA2D134F0C00E98447 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39E72D134F0C00E98447 /* StudentsViewController.swift */; };
+		D3DC39ED2D134F2700E98447 /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DC39EC2D134F2700E98447 /* ReportsViewController.xib */; };
+		D3DC39EE2D134F2700E98447 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39EB2D134F2700E98447 /* ReportsViewController.swift */; };
+		D3DC39F12D134F3600E98447 /* ReservationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DC39F02D134F3600E98447 /* ReservationsViewController.xib */; };
+		D3DC39F22D134F3600E98447 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39EF2D134F3600E98447 /* ReservationsViewController.swift */; };
+		D3DC39F52D134F4400E98447 /* WorkAgendaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DC39F42D134F4400E98447 /* WorkAgendaViewController.xib */; };
+		D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39F32D134F4400E98447 /* WorkAgendaViewController.swift */; };
 		D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */; };
 		D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */; };
 		D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96B32D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld */; };
@@ -69,6 +84,21 @@
 		D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		D3C17B2A2D10804D0018BDE5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		D3C17B2C2D10805A0018BDE5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D3C17B2E2D10806C0018BDE5 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		D3C17B302D10807C0018BDE5 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		D3C17B342D10C2340018BDE5 /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
+		D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		D3DC39D82D134DE300E98447 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		D3DC39E72D134F0C00E98447 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		D3DC39E82D134F0C00E98447 /* StudentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentsViewController.xib; sourceTree = "<group>"; };
+		D3DC39EB2D134F2700E98447 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		D3DC39EC2D134F2700E98447 /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
+		D3DC39EF2D134F3600E98447 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
+		D3DC39F02D134F3600E98447 /* ReservationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationsViewController.xib; sourceTree = "<group>"; };
+		D3DC39F32D134F4400E98447 /* WorkAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAgendaViewController.swift; sourceTree = "<group>"; };
+		D3DC39F42D134F4400E98447 /* WorkAgendaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkAgendaViewController.xib; sourceTree = "<group>"; };
 		D3FA96A72D0119400058C8D1 /* Momtaz-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Momtaz-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +239,154 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D3C17B282D107FAC0018BDE5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3C17B2A2D10804D0018BDE5 /* NetworkManagerProtocol.swift */,
+				D3C17B2C2D10805A0018BDE5 /* NetworkManager.swift */,
+				D3C17B2E2D10806C0018BDE5 /* URLs.swift */,
+				D3C17B302D10807C0018BDE5 /* UserDefaults.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D3C17B292D107FB50018BDE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3C17B342D10C2340018BDE5 /* LogInResponse.swift */,
+				D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3DC39D72D134DCD00E98447 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39DA2D134E5900E98447 /* Views */,
+				D3DC39D82D134DE300E98447 /* MainTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D3DC39DA2D134E5900E98447 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39DE2D134E7B00E98447 /* Students */,
+				D3DC39DD2D134E7200E98447 /* Reports */,
+				D3DC39DC2D134E6900E98447 /* Reservation */,
+				D3DC39DB2D134E6100E98447 /* WorkAgenda */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3DC39DB2D134E6100E98447 /* WorkAgenda */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39E02D134EB700E98447 /* ViewModel */,
+				D3DC39F72D13622F00E98447 /* Views */,
+			);
+			path = WorkAgenda;
+			sourceTree = "<group>";
+		};
+		D3DC39DC2D134E6900E98447 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39E22D134ED500E98447 /* ViewModel */,
+				D3DC39E12D134ED000E98447 /* View */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		D3DC39DD2D134E7200E98447 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39E42D134EE000E98447 /* ViewModel */,
+				D3DC39E32D134EDB00E98447 /* View */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		D3DC39DE2D134E7B00E98447 /* Students */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39E62D134EF300E98447 /* ViewModel */,
+				D3DC39E52D134EEE00E98447 /* View */,
+			);
+			path = Students;
+			sourceTree = "<group>";
+		};
+		D3DC39DF2D134EA300E98447 /* workAgendaPage */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39F32D134F4400E98447 /* WorkAgendaViewController.swift */,
+				D3DC39F42D134F4400E98447 /* WorkAgendaViewController.xib */,
+			);
+			path = workAgendaPage;
+			sourceTree = "<group>";
+		};
+		D3DC39E02D134EB700E98447 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3DC39E12D134ED000E98447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39EF2D134F3600E98447 /* ReservationsViewController.swift */,
+				D3DC39F02D134F3600E98447 /* ReservationsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3DC39E22D134ED500E98447 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3DC39E32D134EDB00E98447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39EB2D134F2700E98447 /* ReportsViewController.swift */,
+				D3DC39EC2D134F2700E98447 /* ReportsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3DC39E42D134EE000E98447 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3DC39E52D134EEE00E98447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39E72D134F0C00E98447 /* StudentsViewController.swift */,
+				D3DC39E82D134F0C00E98447 /* StudentsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3DC39E62D134EF300E98447 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3DC39F72D13622F00E98447 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3DC39DF2D134EA300E98447 /* workAgendaPage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D3FA969E2D0119400058C8D1 = {
 			isa = PBXGroup;
 			children = (
@@ -234,9 +412,12 @@
 		D3FA96A92D0119400058C8D1 /* Momtaz-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3C17B292D107FB50018BDE5 /* Model */,
+				D3C17B282D107FAC0018BDE5 /* Service */,
 				D3FA96E92D01228E0058C8D1 /* Custom Components */,
-				D3FA96E22D0120440058C8D1 /* Authntication */,
 				D3FA96DD2D011EA70058C8D1 /* Utilites */,
+				D3DC39D72D134DCD00E98447 /* TabBar */,
+				D3FA96E22D0120440058C8D1 /* Authntication */,
 				D3FA96AA2D0119400058C8D1 /* AppDelegate.swift */,
 				D3FA96AC2D0119400058C8D1 /* SceneDelegate.swift */,
 				D3FA96B62D0119420058C8D1 /* Assets.xcassets */,
@@ -404,6 +585,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DC39F12D134F3600E98447 /* ReservationsViewController.xib in Resources */,
+				D3DC39ED2D134F2700E98447 /* ReportsViewController.xib in Resources */,
+				D3DC39E92D134F0C00E98447 /* StudentsViewController.xib in Resources */,
+				D3DC39F52D134F4400E98447 /* WorkAgendaViewController.xib in Resources */,
 				D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */,
 				D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */,
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
@@ -476,22 +661,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */,
+				D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */,
+				D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */,
+				D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */,
 				D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */,
+				D3DC39D92D134DE300E98447 /* MainTabBar.swift in Sources */,
 				D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */,
 				D30FD6CF2D04AFBF00F7AAC7 /* CustomNavigationController.swift in Sources */,
 				D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */,
+				D3DC39F22D134F3600E98447 /* ReservationsViewController.swift in Sources */,
+				D3C17B312D10807C0018BDE5 /* UserDefaults.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
 				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,
 				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
 				D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */,
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
+				D3C17B2B2D10804D0018BDE5 /* NetworkManagerProtocol.swift in Sources */,
 				D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */,
 				D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */,
 				D31C8DF72D060F7D00A8EA1A /* ValidationError.swift in Sources */,
+				D3C17B2F2D10806C0018BDE5 /* URLs.swift in Sources */,
 				D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */,
 				D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */,
+				D3DC39EE2D134F2700E98447 /* ReportsViewController.swift in Sources */,
 				D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */,
+				D3DC39EA2D134F0C00E98447 /* StudentsViewController.swift in Sources */,
 				D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

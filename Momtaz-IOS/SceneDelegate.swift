@@ -18,10 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let rootViewController = LoginViewController()
-        let navigationController = BaseNavigationController(root: rootViewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        if UserDefaultsManager.shared.getAccessToken() == nil {
+            let loginViewController = LoginViewController()
+            let navigationController = BaseNavigationController(root: loginViewController)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }else{
+            let mainTabBar = MainTabBarViewController()
+//            window?.rootViewController = mainTabBar
+            let navigationController = BaseNavigationController(root: mainTabBar)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

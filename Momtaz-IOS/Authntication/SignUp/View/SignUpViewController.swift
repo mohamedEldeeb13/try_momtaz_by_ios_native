@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ProgressHUD
 
 class SignUpViewController: UIViewController {
     //MARK: components outlet
@@ -17,14 +20,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var termsAndConditionButtonUI: UIButton!
     @IBOutlet weak var signUpButtonUI: UIButton!
     
-    //MARK: add pages attributes
-
-    private let viewModel = SignUpViewModel()
+    //MARK: page attributes
+    private let viewModel : SignUpViewModelProtocol = SignUpViewModel()
+    private let bag = DisposeBag()
     
     //MARK: page life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupIntailUI()
+        bindingAllFunction()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -51,26 +55,15 @@ class SignUpViewController: UIViewController {
     
     //MARK: action tapped button
     @IBAction func termsAndConditionButtonTapped(_ sender: Any) {
-        viewModel.isTermsAccepted.toggle()
-        let image = viewModel.isTermsAccepted ? "checkmark.square.fill" : "square"
-        let tintColor = viewModel.isTermsAccepted ? UIColor.lightPurple : UIColor.lightGray
-        termsAndConditionButtonUI.setImage(UIImage(systemName: image), for: .normal)
-        termsAndConditionButtonUI.tintColor = tintColor
+        // Toggle the state of `isTermsAccepted`
+            let currentState = viewModel.input.isTermsAccepted.value
+            viewModel.input.isTermsAccepted.accept(!currentState)
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
-        // Update ViewModel properties
-                viewModel.fullName = fullNameTextFieldView.text ?? ""
-                viewModel.phoneNumber = phoneNumberTextFieldView.text ?? ""
-                viewModel.password = passwordTextFieldView.text ?? ""
-                viewModel.confirmPassword = confirmPasswordTextFieldView.text ?? ""
-        // Perform validation
-               let validationResult = viewModel.validateAndSignUp()
-               if validationResult {
-                   print("SignUp Success")
-               } else {
-                   showAlert(title: Constants.warning, message: (viewModel.errorMessage)!)
-               }
+       
+        viewModel.validationAndSignUp()
+               
     }
     
     @IBAction func alreadyHaveAccountButtonTapped(_ sender: Any) {
@@ -83,6 +76,50 @@ class SignUpViewController: UIViewController {
             
         let alert = Alert().showAlertWithOnlyPositiveButtons(title: title, msg: message, positiveButtonTitle: Constants.ok) { _ in completion?() }
         present(alert, animated: true)
+    }
+}
+
+//MARK: All binding functions
+extension SignUpViewController {
+    private func bindingAllFunction(){
+        bindToViewModel()
+        subscribeWithIsAcceptTermsAndCondfitions()
+        subscribeWithSignUpStates()
+        
+    }
+    
+    private func bindToViewModel(){
+        fullNameTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.fullNameTextBehavorail).disposed(by: bag)
+        phoneNumberTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.phoneNumberTextBehavorail).disposed(by: bag)
+        passwordTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.passwordTextBehavorail).disposed(by: bag)
+        confirmPasswordTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.confirmPasswordTextBehavorail).disposed(by: bag)
+    }
+    
+    private func subscribeWithIsAcceptTermsAndCondfitions(){
+        viewModel.input.isTermsAccepted.subscribe { [weak self] isAccepted in
+            guard let self = self else { return }
+                let image = isAccepted ? "checkmark.square.fill" : "square"
+                let tintColor = isAccepted ? UIColor.systemPurple : UIColor.lightGray
+                self.termsAndConditionButtonUI.setImage(UIImage(systemName: image), for: .normal)
+                self.termsAndConditionButtonUI.tintColor = tintColor
+        
+        }.disposed(by: bag)
+    }
+    
+    private func subscribeWithSignUpStates(){
+        viewModel.input.signUpStatesPublisher.subscribe { [weak self] SignUpStates in
+            guard let self = self else{return}
+            switch SignUpStates {
+            case .showLoading:
+                ProgressHUD.animate("Loading...")
+            case .hideLoading:
+                ProgressHUD.dismiss()
+            case .success:
+                print("success")
+            case .failure(let error):
+                showAlert(title: Constants.warning, message: error)
+            }
+        }.disposed(by: bag)
     }
 }
 

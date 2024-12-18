@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ProgressHUD
 
 class LoginViewController: UIViewController{
     
@@ -14,12 +17,14 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var passwordTextFieldView: RoundedTextField!
     @IBOutlet weak var loginButtonUI: UIButton!
     
-    private let viewModel = LoginViewModel()
+    private let viewModel : LoginViewModelProtocol = LoginViewModel()
+    private let bag = DisposeBag()
     
     //MARK: page life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupIntailUI()
+        allBindingFunctions()
     }
     
     //MARK: setup intail design
@@ -35,19 +40,10 @@ class LoginViewController: UIViewController{
     
     
     
-    //MARK: action tapped button
+    //MARK: action tapped buttons
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        // Update ViewModel properties
-                viewModel.phoneNumber = phoneNumberTextFieldView.text ?? ""
-                viewModel.password = passwordTextFieldView.text ?? ""
-        // Perform validation
-               let validationResult = viewModel.validateAndLogIn()
-               if validationResult {
-                   print("LogIn Success")
-               } else {
-                   showAlert(title: Constants.warning, message: viewModel.errorMessage!)
-               }
+        viewModel.validationAndLogIn()
     }
     
     @IBAction func ForgetPasswordButtonTapped(_ sender: Any) {
@@ -68,6 +64,44 @@ class LoginViewController: UIViewController{
         let alert = Alert().showAlertWithOnlyPositiveButtons(title: title, msg: message, positiveButtonTitle: Constants.ok) { _ in completion?() }
         present(alert, animated: true)
     }
+    
+    //MARK: navigation to main tab bar
+    func navigateToMainTabBar() {
+        let mainTabBarController = MainTabBarViewController()
+        let navigationController = BaseNavigationController(root: mainTabBarController)
+        self.sceneDelegate?.window?.rootViewController = navigationController
+
+    }
 }
 
 
+//MARK: all binding functions
+extension LoginViewController {
+    
+    private func allBindingFunctions() {
+        bindToViewModel()
+        subscribeWithLoginStates()
+    }
+    
+    private func bindToViewModel() {
+        phoneNumberTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.phoneNumberTextBehavorail).disposed(by: bag)
+        passwordTextFieldView.rx.text.orEmpty.bind(to: viewModel.input.passwordTextBehavorail).disposed(by: bag)
+        
+    }
+    
+    private func subscribeWithLoginStates(){
+        viewModel.input.LoginStatesPublisher.subscribe(onNext: {[weak self] loginStates in
+            guard let self = self else{return}
+            switch loginStates {
+            case .showLoading:
+                ProgressHUD.animate("Loading...")
+            case .hideLoading:
+                ProgressHUD.dismiss()
+            case .success:
+                navigateToMainTabBar()
+            case .failure(let errorMessage):
+                showAlert(title: Constants.warning, message: errorMessage)
+            }
+        }).disposed(by: bag)
+    }
+}

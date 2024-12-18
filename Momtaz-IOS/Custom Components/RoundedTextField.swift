@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 @IBDesignable
 class RoundedTextField: UIView {
@@ -228,4 +230,10 @@ extension RoundedTextfieldDelegate {
     func textFieldDidEndEditing(textfield: RoundedTextField){}
     func textFieldDidClearText(textfield: RoundedTextField){}
 }
+extension Reactive where Base: RoundedTextField {
+    var text: ControlProperty<String?> {
+        return base.textFieldView.rx.text
+    }
+}
+
 

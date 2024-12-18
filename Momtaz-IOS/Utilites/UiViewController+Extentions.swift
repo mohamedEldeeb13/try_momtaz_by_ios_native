@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: for normal push
 extension UIViewController{
     
    static var identifier : String {
@@ -35,4 +36,17 @@ extension UIViewController{
         case xib
         
     }
+}
+
+//MARK: for change root when push
+extension UIViewController {
+    var appDelegate: AppDelegate {
+         return UIApplication.shared.delegate as! AppDelegate
+    }
+
+    var sceneDelegate: SceneDelegate? {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+        let delegate = windowScene.delegate as? SceneDelegate else { return nil }
+            return delegate
+        }
 }
