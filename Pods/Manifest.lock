@@ -41,6 +41,7 @@ PODS:
   - IQTextView (1.0.5):
     - IQKeyboardToolbar/Placeholderable
   - ProgressHUD (14.1.1)
+  - ReachabilitySwift (5.2.4)
   - RxCocoa (6.8.0):
     - RxRelay (= 6.8.0)
     - RxSwift (= 6.8.0)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Alamofire
   - IQKeyboardManagerSwift
   - ProgressHUD
+  - ReachabilitySwift
   - RxCocoa (= 6.8.0)
   - RxSwift (= 6.8.0)
   - SDWebImage
@@ -71,6 +73,7 @@ SPEC REPOS:
     - IQTextInputViewNotification
     - IQTextView
     - ProgressHUD
+    - ReachabilitySwift
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -87,11 +90,12 @@ SPEC CHECKSUMS:
   IQTextInputViewNotification: f5e954d8881fd9808b744e49e024cc0d4bcfe572
   IQTextView: ae13b4922f22e6f027f62c557d9f4f236b19d5c7
   ProgressHUD: abb9136ae23c85204236828562cb9a8ec98efb44
+  ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
   RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
   RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   SDWebImage: 73c6079366fea25fa4bb9640d5fb58f0893facd8
 
-PODFILE CHECKSUM: aaed861bf2a145cc0a69f4bf9bb88caac1053afa
+PODFILE CHECKSUM: 8f2e5106f38567f91ccd77938bb71c75b1d01fae
 
 COCOAPODS: 1.15.2

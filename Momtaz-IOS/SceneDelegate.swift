@@ -20,13 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         if UserDefaultsManager.shared.getAccessToken() == nil {
             let loginViewController = LoginViewController()
-            let navigationController = BaseNavigationController(root: loginViewController)
+            let navigationController = AuthNavigationController(root: loginViewController)
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }else{
             let mainTabBar = MainTabBarViewController()
-//            window?.rootViewController = mainTabBar
-            let navigationController = BaseNavigationController(root: mainTabBar)
+            let navigationController = MainNavigationController(root: mainTabBar)
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }

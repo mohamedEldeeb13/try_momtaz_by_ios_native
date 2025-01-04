@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let navigationController = self.navigationController as? BaseNavigationController { navigationController.setLogoInTitleView()
+        if let navigationController = self.navigationController as? AuthNavigationController { navigationController.setLogoInTitleView()
         }
     }
     

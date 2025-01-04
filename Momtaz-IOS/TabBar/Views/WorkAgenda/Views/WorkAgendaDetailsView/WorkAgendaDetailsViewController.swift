@@ -1,13 +1,13 @@
 //
-//  WorkAgendaViewController.swift
+//  WorkAgendaDetailsViewController.swift
 //  Momtaz-IOS
 //
-//  Created by Mohamed Abd Elhakam on 18/12/2024.
+//  Created by Mohamed Abd Elhakam on 04/01/2025.
 //
 
 import UIKit
 
-class WorkAgendaViewController: UIViewController {
+class WorkAgendaDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

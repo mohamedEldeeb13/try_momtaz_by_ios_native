@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController, UIGestureRecognizerDelegate {
+class AuthNavigationController: UINavigationController, UIGestureRecognizerDelegate {
     
     //MARK: Appearance struct
     struct AppearanceTheme {
@@ -31,7 +31,7 @@ class BaseNavigationController: UINavigationController, UIGestureRecognizerDeleg
     }
 
     //MARK: General setup Appearance
-    func setupAppearance(with theme: AppearanceTheme) {
+    private func setupAppearance(with theme: AppearanceTheme) {
         
         // Attributes for title and large title text
         let attributes: [NSAttributedString.Key: Any] = [

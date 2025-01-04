@@ -25,19 +25,31 @@ class NetworkManager: NetworkManagerProtocol {
         return headers
     }
     
-    func getData<T: Decodable>(url: String, handler: @escaping (T?) -> Void) {
-        AF.request(url,parameters: nil, headers: nil).responseData { response in
+    func getData<T: Decodable>(url: String, handler: @escaping (T?, String?) -> Void) {
+        
+        AF.request(url,parameters: nil, headers: getHeader()).responseData { response in
             switch response.result {
             case .success(let data):
                 do {
+                    
                     let result = try JSONDecoder().decode(T.self, from: data)
-                    handler(result)
+                    
+                    // to print response as json if can decodable
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                        if let jsonString = String(data: jsonData, encoding: .utf8) {
+                            print("Response JSON: \n \(jsonString)") // Print the JSON response as a string
+                        }
+                    }
+                    
+                    handler(result, nil)
                 } catch {
                     print("Decoding error: \(error.localizedDescription)")
-//                    handler(nil)
+                    handler(nil, "Decoding error: \(error.localizedDescription)")
                 }
             case .failure(let error):
                 print("Error: \(error)")
+                handler(nil, "Request error: \(error.localizedDescription)")
             }
         }
     }

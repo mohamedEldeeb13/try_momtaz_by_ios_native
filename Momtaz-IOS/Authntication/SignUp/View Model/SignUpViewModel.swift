@@ -70,6 +70,13 @@ class SignUpViewModel : SignUpViewModelProtocol , ViewModel {
         }
     
     private func signUp(){
+        
+        // Check for internet connectivity
+        guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
+            self.input.signUpStatesPublisher.onNext(.failure("No internet connection"))
+            return
+        }
+        
         self.input.signUpStatesPublisher.onNext(.showLoading)
         let signUpURL = URLs.shared.getSignUpURL()
         let signUpParameters : [String : Any] = [
@@ -78,18 +85,16 @@ class SignUpViewModel : SignUpViewModelProtocol , ViewModel {
             "password": self.input.passwordTextBehavorail.value
         ]
         NetworkManager.shared.postData(url: signUpURL, parameters: signUpParameters) { (response : SignUpResponse?, statusCode) in
+            self.input.signUpStatesPublisher.onNext(.hideLoading)
             if let statusCode = statusCode, (200...299).contains(statusCode){
                 if response?.errors == nil {
-                    self.input.signUpStatesPublisher.onNext(.hideLoading)
                     self.input.signUpStatesPublisher.onNext(.success)
                     // Complete the stream (no more updates will be sent)
                     self.input.signUpStatesPublisher.onCompleted()
                 }else{
-                    self.input.signUpStatesPublisher.onNext(.hideLoading)
                     self.input.signUpStatesPublisher.onNext(.failure(response?.errors?.values.first?.first ?? ""))
                 }
             }else{
-                self.input.signUpStatesPublisher.onNext(.hideLoading)
                 self.input.signUpStatesPublisher.onNext(.failure("Your phone is already used"))
             }
         }

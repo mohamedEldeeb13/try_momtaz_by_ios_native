@@ -12,5 +12,7 @@ pod 'RxCocoa', '6.8.0'
 pod 'Alamofire'
 pod 'SDWebImage'
 pod 'ProgressHUD'
+pod 'ReachabilitySwift'
+
 
 end

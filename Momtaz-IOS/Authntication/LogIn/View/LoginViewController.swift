@@ -68,7 +68,7 @@ class LoginViewController: UIViewController{
     //MARK: navigation to main tab bar
     func navigateToMainTabBar() {
         let mainTabBarController = MainTabBarViewController()
-        let navigationController = BaseNavigationController(root: mainTabBarController)
+        let navigationController = MainNavigationController(root: mainTabBarController)
         self.sceneDelegate?.window?.rootViewController = navigationController
 
     }

@@ -71,6 +71,12 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
     // MARK: - Login Function (with Alamofire POST request)
     
     private func login(){
+        
+        // Check for internet connectivity
+        guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
+            self.input.LoginStatesPublisher.onNext(.failure("No internet connection"))
+            return
+        }
         self.input.LoginStatesPublisher.onNext(.showLoading)
             
         let loginURL = URLs.shared.getLoginURL()
@@ -81,6 +87,7 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
             
             // Alamofire POST request
         NetworkManager.shared.postData(url: loginURL, parameters: loginParameters) { (response: LogInResponse?, statusCode) in
+            
             self.input.LoginStatesPublisher.onNext(.hideLoading)
             if let statusCode = statusCode , (200...299).contains(statusCode) {
                 if response?.authorization?.token != nil {
@@ -89,11 +96,9 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
     //              Complete the stream (no more updates will be sent)
                     self.input.LoginStatesPublisher.onCompleted()
                 }else{
-                    self.input.LoginStatesPublisher.onNext(.hideLoading)
                     self.input.LoginStatesPublisher.onNext(.failure("not have token please try in another time"))
                 }
             }else{
-                self.input.LoginStatesPublisher.onNext(.hideLoading)
                 self.input.LoginStatesPublisher.onNext(.failure("Your email or password is incorrect"))
             }
         }

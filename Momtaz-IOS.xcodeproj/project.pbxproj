@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A921F616429728009B315848 /* Pods_Momtaz_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */; };
-		D30FD6CF2D04AFBF00F7AAC7 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */; };
+		D30FD6CF2D04AFBF00F7AAC7 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FD6CE2D04AFBF00F7AAC7 /* AuthNavigationController.swift */; };
+		D31B21632D1EA37600E95862 /* LessonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B21622D1EA37600E95862 /* LessonResponse.swift */; };
+		D31B21652D24478C00E95862 /* WorkAgendaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B21642D24478C00E95862 /* WorkAgendaViewModel.swift */; };
+		D31B21672D25C4A200E95862 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B21662D25C4A200E95862 /* DateFormatterHelper.swift */; };
+		D31B21692D25CCB000E95862 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B21682D25CCB000E95862 /* HelperFunctions.swift */; };
 		D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */; };
 		D31C8DF72D060F7D00A8EA1A /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */; };
 		D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */; };
 		D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */; };
 		D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */; };
+		D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */; };
+		D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */; };
+		D36E516A2D145FFF007BECC7 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E51692D145FFF007BECC7 /* MainNavigationController.swift */; };
+		D36E516C2D1481B1007BECC7 /* CustomBadgeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E516B2D1481B1007BECC7 /* CustomBadgeButtonView.swift */; };
 		D38262AF2D041F980086CB1E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262AE2D041F980086CB1E /* Alert.swift */; };
 		D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */; };
 		D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */; };
@@ -26,6 +34,9 @@
 		D3C17B2F2D10806C0018BDE5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2E2D10806C0018BDE5 /* URLs.swift */; };
 		D3C17B312D10807C0018BDE5 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B302D10807C0018BDE5 /* UserDefaults.swift */; };
 		D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B342D10C2340018BDE5 /* LogInResponse.swift */; };
+		D3D1A1652D260573003B16E5 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1A1642D260573003B16E5 /* ConnectivityManager.swift */; };
+		D3D1A1692D262383003B16E5 /* NoInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1A1682D262383003B16E5 /* NoInternet.swift */; };
+		D3D1A16B2D2646DE003B16E5 /* NoLessonsToDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1A16A2D2646DE003B16E5 /* NoLessonsToDay.swift */; };
 		D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */; };
 		D3DC39D92D134DE300E98447 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC39D82D134DE300E98447 /* MainTabBar.swift */; };
 		D3DC39E92D134F0C00E98447 /* StudentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DC39E82D134F0C00E98447 /* StudentsViewController.xib */; };
@@ -49,6 +60,8 @@
 		D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */; };
 		D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */; };
 		D3FA96EF2D0123850058C8D1 /* NibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */; };
+		D3FC797A2D29B934000B821E /* WorkAgendaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FC79792D29B933000B821E /* WorkAgendaDetailsViewController.xib */; };
+		D3FC797B2D29B934000B821E /* WorkAgendaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC79782D29B933000B821E /* WorkAgendaDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,12 +84,20 @@
 /* Begin PBXFileReference section */
 		2894F7C6E0246F0D8E727EC8 /* Pods-Momtaz-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momtaz-IOS.release.xcconfig"; path = "Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS.release.xcconfig"; sourceTree = "<group>"; };
 		9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momtaz_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		D30FD6CE2D04AFBF00F7AAC7 /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
+		D31B21622D1EA37600E95862 /* LessonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonResponse.swift; sourceTree = "<group>"; };
+		D31B21642D24478C00E95862 /* WorkAgendaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAgendaViewModel.swift; sourceTree = "<group>"; };
+		D31B21662D25C4A200E95862 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
+		D31B21682D25CCB000E95862 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExcepression.swift; sourceTree = "<group>"; };
 		D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
+		D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonTableViewCell.xib; sourceTree = "<group>"; };
+		D36E51692D145FFF007BECC7 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		D36E516B2D1481B1007BECC7 /* CustomBadgeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBadgeButtonView.swift; sourceTree = "<group>"; };
 		D38262AE2D041F980086CB1E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +110,9 @@
 		D3C17B2E2D10806C0018BDE5 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		D3C17B302D10807C0018BDE5 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D3C17B342D10C2340018BDE5 /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
+		D3D1A1642D260573003B16E5 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		D3D1A1682D262383003B16E5 /* NoInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternet.swift; sourceTree = "<group>"; };
+		D3D1A16A2D2646DE003B16E5 /* NoLessonsToDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLessonsToDay.swift; sourceTree = "<group>"; };
 		D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		D3DC39D82D134DE300E98447 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		D3DC39E72D134F0C00E98447 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +140,8 @@
 		D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedTextField.xib; sourceTree = "<group>"; };
 		D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadedView.swift; sourceTree = "<group>"; };
+		D3FC79782D29B933000B821E /* WorkAgendaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAgendaDetailsViewController.swift; sourceTree = "<group>"; };
+		D3FC79792D29B933000B821E /* WorkAgendaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkAgendaDetailsViewController.xib; sourceTree = "<group>"; };
 		E62FF1B1E5691D04DDCB1038 /* Pods-Momtaz-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momtaz-IOS.debug.xcconfig"; path = "Target Support Files/Pods-Momtaz-IOS/Pods-Momtaz-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +186,16 @@
 				9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D36599312D1E9BB20062B09C /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */,
+				D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */,
+				D3D1A16A2D2646DE003B16E5 /* NoLessonsToDay.swift */,
+			);
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 		D3A01AF02D05D5BD008AE4A0 /* LogIn */ = {
@@ -255,6 +291,7 @@
 			children = (
 				D3C17B342D10C2340018BDE5 /* LogInResponse.swift */,
 				D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */,
+				D31B21622D1EA37600E95862 /* LessonResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +364,7 @@
 		D3DC39E02D134EB700E98447 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D31B21642D24478C00E95862 /* WorkAgendaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,7 +420,8 @@
 		D3DC39F72D13622F00E98447 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3DC39DF2D134EA300E98447 /* workAgendaPage */,
+				D3FC79762D29AF08000B821E /* WorkAgendaView */,
+				D3FC79772D29AFAB000B821E /* WorkAgendaDetailsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,6 +493,9 @@
 				D31C8DF42D060F3C00A8EA1A /* ValidationService.swift */,
 				D31C8DF62D060F7D00A8EA1A /* ValidationError.swift */,
 				D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */,
+				D31B21662D25C4A200E95862 /* DateFormatterHelper.swift */,
+				D31B21682D25CCB000E95862 /* HelperFunctions.swift */,
+				D3D1A1642D260573003B16E5 /* ConnectivityManager.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -474,9 +516,30 @@
 				D3FA96EA2D0122AD0058C8D1 /* RoundedTextField.xib */,
 				D3FA96EC2D0122D70058C8D1 /* RoundedTextField.swift */,
 				D3FA96EE2D0123850058C8D1 /* NibLoadedView.swift */,
-				D30FD6CE2D04AFBF00F7AAC7 /* CustomNavigationController.swift */,
+				D30FD6CE2D04AFBF00F7AAC7 /* AuthNavigationController.swift */,
+				D36E51692D145FFF007BECC7 /* MainNavigationController.swift */,
+				D36E516B2D1481B1007BECC7 /* CustomBadgeButtonView.swift */,
+				D3D1A1682D262383003B16E5 /* NoInternet.swift */,
 			);
 			path = "Custom Components";
+			sourceTree = "<group>";
+		};
+		D3FC79762D29AF08000B821E /* WorkAgendaView */ = {
+			isa = PBXGroup;
+			children = (
+				D36599312D1E9BB20062B09C /* Custom Components */,
+				D3DC39DF2D134EA300E98447 /* workAgendaPage */,
+			);
+			path = WorkAgendaView;
+			sourceTree = "<group>";
+		};
+		D3FC79772D29AFAB000B821E /* WorkAgendaDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC79782D29B933000B821E /* WorkAgendaDetailsViewController.swift */,
+				D3FC79792D29B933000B821E /* WorkAgendaDetailsViewController.xib */,
+			);
+			path = WorkAgendaDetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,12 +652,14 @@
 				D3DC39ED2D134F2700E98447 /* ReportsViewController.xib in Resources */,
 				D3DC39E92D134F0C00E98447 /* StudentsViewController.xib in Resources */,
 				D3DC39F52D134F4400E98447 /* WorkAgendaViewController.xib in Resources */,
+				D3FC797A2D29B934000B821E /* WorkAgendaDetailsViewController.xib in Resources */,
 				D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */,
 				D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */,
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
 				D3FA96BA2D0119420058C8D1 /* Base in Resources */,
 				D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */,
 				D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */,
+				D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,27 +726,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31B21692D25CCB000E95862 /* HelperFunctions.swift in Sources */,
 				D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */,
+				D31B21652D24478C00E95862 /* WorkAgendaViewModel.swift in Sources */,
 				D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */,
 				D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */,
+				D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */,
 				D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */,
 				D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */,
 				D3DC39D92D134DE300E98447 /* MainTabBar.swift in Sources */,
 				D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */,
-				D30FD6CF2D04AFBF00F7AAC7 /* CustomNavigationController.swift in Sources */,
+				D30FD6CF2D04AFBF00F7AAC7 /* AuthNavigationController.swift in Sources */,
+				D31B21672D25C4A200E95862 /* DateFormatterHelper.swift in Sources */,
+				D36E516A2D145FFF007BECC7 /* MainNavigationController.swift in Sources */,
+				D36E516C2D1481B1007BECC7 /* CustomBadgeButtonView.swift in Sources */,
+				D3D1A1652D260573003B16E5 /* ConnectivityManager.swift in Sources */,
 				D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */,
 				D3DC39F22D134F3600E98447 /* ReservationsViewController.swift in Sources */,
 				D3C17B312D10807C0018BDE5 /* UserDefaults.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
 				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,
+				D3D1A1692D262383003B16E5 /* NoInternet.swift in Sources */,
 				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
 				D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */,
+				D31B21632D1EA37600E95862 /* LessonResponse.swift in Sources */,
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
+				D3FC797B2D29B934000B821E /* WorkAgendaDetailsViewController.swift in Sources */,
 				D3C17B2B2D10804D0018BDE5 /* NetworkManagerProtocol.swift in Sources */,
 				D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */,
 				D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */,
 				D31C8DF72D060F7D00A8EA1A /* ValidationError.swift in Sources */,
+				D3D1A16B2D2646DE003B16E5 /* NoLessonsToDay.swift in Sources */,
 				D3C17B2F2D10806C0018BDE5 /* URLs.swift in Sources */,
 				D3FA96ED2D0122D70058C8D1 /* RoundedTextField.swift in Sources */,
 				D3FA96E12D011F490058C8D1 /* UiViewController+Extentions.swift in Sources */,
@@ -870,6 +946,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,6 +975,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

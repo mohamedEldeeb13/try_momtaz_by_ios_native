@@ -15,6 +15,7 @@ class URLs {
     let baseURL = "https://dev.getmomtaz.com/"
     private var endPoint = ""
     
+    //MARK: Authentication urls
     func getLoginURL() -> String {
         return baseURL + "api/auth/login"
     }
@@ -23,5 +24,10 @@ class URLs {
         return baseURL + "api/auth/register"
     }
     
+    
+    //MARK: workAgenda urls
+    func getLessonsDayURL(day:String?) -> String {
+        return day == nil || day == "" ? baseURL + "api/schedule/list-by-day" : baseURL + "api/schedule/list-by-day?date=\(day!)"
+    }
     
 }
