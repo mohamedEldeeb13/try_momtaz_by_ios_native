@@ -29,13 +29,19 @@ class WorkAgendaViewController: UIViewController {
         super.viewDidLoad()
         prepareIntailUI()
         allBindingFunctions()
-
+        
+        // Register for the lesson deleted notification
+        NotificationCenter.default.addObserver(self, selector: #selector(didDeleteLessonSuccessfully), name: .lessonDeletedSuccessfully, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         showNoIntenetView()
     }
     
+    deinit {
+        // Remove observer when the view controller is deallocated
+        NotificationCenter.default.removeObserver(self, name: .lessonDeletedSuccessfully, object: nil)
+    }
     //MARK: prepare intail UI
     private func prepareIntailUI(){
         setupDatePickerUI()
@@ -78,18 +84,25 @@ class WorkAgendaViewController: UIViewController {
         internetConnectivity = ConnectivityManager.connectivityInstance
         if internetConnectivity?.isConnectedToInternet() == true {
             noInternetView.isHidden = true
+            sessionsTableView.isHidden = false
+            noLessonsView.isHidden = false
         }else {
             noInternetView.isHidden = false
+            sessionsTableView.isHidden = true
+            noLessonsView.isHidden = true
         }
     }
     
-    //MARK: prepare Alert
-    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-            
-        let alert = Alert().showAlertWithOnlyPositiveButtons(title: title, msg: message, positiveButtonTitle: Constants.ok) { _ in completion?() }
-        present(alert, animated: true)
+    //MARK: lesson deleted successfully will do this function
+    
+    @objc private func didDeleteLessonSuccessfully() {
+        // Assuming you want to refresh the data for the same day that was being viewed
+            let currentDate = viewModel.input.workAgendaDayBehavior.value
+            // Change the value slightly to trigger the fetch
+            let newDate = currentDate + " " // Concatenate a space or something small to trigger the update
+            viewModel.input.workAgendaDayBehavior.accept(newDate)  // Refresh the main agenda list after a lesson has been deleted
+
     }
-        
 }
 
 
@@ -121,7 +134,9 @@ extension WorkAgendaViewController {
     
     private func subscribeWithTableViewDidSet(){
         sessionsTableView.rx.modelSelected(LessonSessions.self).subscribe(onNext: { item in
-            print("SelectedItem: \(item.id ?? 0)")
+            let controller = WorkAgendaDetailsViewController.instantiat(name: .xib)
+            controller.session = item
+            self.navigationController?.pushViewController(controller, animated: true)
                 }).disposed(by: bag)
     }
     
@@ -130,16 +145,20 @@ extension WorkAgendaViewController {
             guard let self = self else{return}
             switch workAgendaState {
             case .showLoading:
+                self.view.isUserInteractionEnabled = false
                 ProgressHUD.animate("Loading...")
             case .hideLoading:
+                self.view.isUserInteractionEnabled = true
                 ProgressHUD.dismiss()
             case .success:
                 sessionsTableView.reloadData()
             case .failure(let error):
-                if error == "No internet connection"{
+                if error == Constants.noInternetConnection{
                     self.noInternetView.isHidden = false
+                    self.sessionsTableView.isHidden = true
+                    self.noLessonsView.isHidden = true
                 }
-                showAlert(title: Constants.warning, message: error)
+                Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: error, buttonTitle: Constants.ok)
             }
         }).disposed(by: bag)
     }
@@ -148,6 +167,7 @@ extension WorkAgendaViewController {
         guard let self = self else { return }
         self.noLessonsView.isHidden = !sessions.isEmpty
         self.sessionsTableView.isHidden = sessions.isEmpty
+        self.noInternetView.isHidden = sessions.isEmpty
     }).disposed(by: bag)
     }
 

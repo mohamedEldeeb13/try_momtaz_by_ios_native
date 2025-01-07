@@ -74,7 +74,7 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
         
         // Check for internet connectivity
         guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
-            self.input.LoginStatesPublisher.onNext(.failure("No internet connection"))
+            self.input.LoginStatesPublisher.onNext(.failure(Constants.noInternetConnection))
             return
         }
         self.input.LoginStatesPublisher.onNext(.showLoading)

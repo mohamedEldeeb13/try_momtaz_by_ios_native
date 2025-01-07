@@ -69,14 +69,7 @@ class SignUpViewController: UIViewController {
     @IBAction func alreadyHaveAccountButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
-    //MARK: prepare Alert
-    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-            
-        let alert = Alert().showAlertWithOnlyPositiveButtons(title: title, msg: message, positiveButtonTitle: Constants.ok) { _ in completion?() }
-        present(alert, animated: true)
-    }
+
 }
 
 //MARK: All binding functions
@@ -116,8 +109,8 @@ extension SignUpViewController {
                 ProgressHUD.dismiss()
             case .success:
                 print("success")
-            case .failure(let error):
-                showAlert(title: Constants.warning, message: error)
+            case .failure(let errorMessage):
+                Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
             }
         }.disposed(by: bag)
     }

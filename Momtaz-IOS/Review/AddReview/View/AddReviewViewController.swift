@@ -1,13 +1,13 @@
 //
-//  WorkAgendaDetailsViewController.swift
+//  AddReviewViewController.swift
 //  Momtaz-IOS
 //
-//  Created by Mohamed Abd Elhakam on 04/01/2025.
+//  Created by Mohamed Abd Elhakam on 06/01/2025.
 //
 
 import UIKit
 
-class WorkAgendaDetailsViewController: UIViewController {
+class AddReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

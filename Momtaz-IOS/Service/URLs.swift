@@ -13,7 +13,14 @@ class URLs {
     
     
     let baseURL = "https://dev.getmomtaz.com/"
+    private let baseImageURL = "https://dev.getmomtaz.com/storage/"
     private var endPoint = ""
+    
+    //MARK: prepare image or video or pdf url
+    func  getPhotoOrVideoOrPdfURL(path: String) -> String{
+        return baseImageURL + path
+        
+    }
     
     //MARK: Authentication urls
     func getLoginURL() -> String {
@@ -30,4 +37,7 @@ class URLs {
         return day == nil || day == "" ? baseURL + "api/schedule/list-by-day" : baseURL + "api/schedule/list-by-day?date=\(day!)"
     }
     
+    func getCancelLessonUrl(sessionId: String) -> String {
+        return baseURL + "api/schedule/cancel-session/\(sessionId)"
+    }
 }

@@ -73,7 +73,7 @@ class SignUpViewModel : SignUpViewModelProtocol , ViewModel {
         
         // Check for internet connectivity
         guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
-            self.input.signUpStatesPublisher.onNext(.failure("No internet connection"))
+            self.input.signUpStatesPublisher.onNext(.failure(Constants.noInternetConnection))
             return
         }
         

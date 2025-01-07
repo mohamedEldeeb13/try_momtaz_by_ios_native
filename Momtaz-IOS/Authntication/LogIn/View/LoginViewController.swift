@@ -56,15 +56,7 @@ class LoginViewController: UIViewController{
         let controller = SignUpViewController.instantiat(name: .xib)
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
-    
-    //MARK: prepare Alert
-    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-            
-        let alert = Alert().showAlertWithOnlyPositiveButtons(title: title, msg: message, positiveButtonTitle: Constants.ok) { _ in completion?() }
-        present(alert, animated: true)
-    }
-    
+
     //MARK: navigation to main tab bar
     func navigateToMainTabBar() {
         let mainTabBarController = MainTabBarViewController()
@@ -100,7 +92,7 @@ extension LoginViewController {
             case .success:
                 navigateToMainTabBar()
             case .failure(let errorMessage):
-                showAlert(title: Constants.warning, message: errorMessage)
+                Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
             }
         }).disposed(by: bag)
     }

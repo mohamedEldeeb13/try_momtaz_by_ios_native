@@ -31,6 +31,25 @@ struct LessonSessions : Codable {
     let isReported: Bool?
     let seq: Int?
     let booking: LessonBooking?
+    let report: LessonReport?
+    
+    // prepare lesson start and end time
+     func prepareLessonStartAndEndDate() -> String{
+         let startDate = DateFormatterHelper.convertDateStringToTime(self.startDate ?? "")
+         let endDate = DateFormatterHelper.convertDateStringToTime(self.endDate ?? "")
+        return "From \(startDate!) To \(endDate!)"
+        
+    }
+    // prepare lesson time
+    func prepareLessonTime() -> String{
+        let startDate = DateFormatterHelper.convertDateStringToTime(self.startDate ?? "")
+        return startDate ?? "-"
+    }
+    // prepare lesson day
+    func prepareLessonDay() -> String{
+        let startDate = DateFormatterHelper.convertDateToAsNameString(self.startDate ?? "")
+        return startDate ?? "-"
+    }
     
     enum CodingKeys: String, CodingKey {
                 case id
@@ -45,8 +64,7 @@ struct LessonSessions : Codable {
                 case endDate = "end_date"
                 case status
                 case isReported = "is_reported"
-                case seq
-                case booking
+                case seq, booking, report
     }
 }
 
@@ -76,6 +94,7 @@ struct LessonBooking : Codable {
     let students: [Student]?
     let subject: Subject?
     
+    
     enum CodingKeys: String, CodingKey {
                 case id
                 case createdAt = "created_at"
@@ -104,6 +123,29 @@ struct LessonBooking : Codable {
                 case settledAt = "settled_at"
                 case payoutCount = "payout_count"
                 case package, packagePrice,  slots, parent, student, students, subject
+    }
+}
+
+// MARK: - report
+struct LessonReport : Codable {
+    let id: Int?
+    let createdAt, updatedAt: String?
+    let teacherID, parentID, studentID, sessionID, scientificScore, absorbScore, commitmentScore, globalScore: Int?
+    let note: String?
+
+    enum CodingKeys: String, CodingKey {
+                case id
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case teacherID = "teacher_id"
+                case parentID = "parent_id"
+                case studentID = "student_id"
+                case sessionID = "session_id"
+                case scientificScore = "scientific_score"
+                case absorbScore = "absorb_score"
+                case commitmentScore = "commitment_score"
+                case globalScore = "global_score"
+                case note
     }
 }
 
@@ -227,6 +269,12 @@ struct Location : Codable {
     let country: Country?
     let city: City?
     let government: Government?
+    
+    func getFormattedParentLocation() -> String {
+            let country = self.country?.name?.en ?? self.country?.name?.ar ?? "-"
+            let city = self.city?.name?.en ?? self.city?.name?.ar ?? "-"
+            return "\(country) - \(city)"
+        }
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -362,6 +410,12 @@ struct Student : Codable {
     let pivot: LessonPivot?
     let level: Level?
     
+    func getFormattedStudentLevel() -> String {
+        let levelName = self.level?.name?.en ?? self.level?.name?.ar ?? "-"
+        let classroomNumber = String(self.clsroom ?? 0)
+        return HelperFunctions.getStudentLevel(levelName: levelName, classRoomNumber: classroomNumber)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case createdAt = "created_at"
@@ -406,6 +460,10 @@ struct Subject : Codable {
     let createdAt, updatedAt: String?
     let color: String?
     let title: Title?
+    
+    func getFormattedSubject() -> String {
+        return self.title?.en ?? self.title?.ar ?? "-"
+    }
     
     enum CodingKeys: String, CodingKey {
         case id

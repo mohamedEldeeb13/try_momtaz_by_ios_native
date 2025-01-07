@@ -62,7 +62,7 @@ class WorkAgendaViewModel : WorkAgendaViewModelProtocol , ViewModel {
     private func fetchLessonssFromApi() {
         // Check for internet connectivity
         guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
-            self.input.workAgendaStatePublisher.onNext(.failure("No internet connection"))
+            self.input.workAgendaStatePublisher.onNext(.failure(Constants.noInternetConnection))
             return
         }
         self.input.workAgendaStatePublisher.onNext(.showLoading)
