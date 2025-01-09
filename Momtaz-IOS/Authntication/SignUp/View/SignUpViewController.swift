@@ -44,8 +44,7 @@ class SignUpViewController: UIViewController {
     
     // prepare login button
     private func setupSignupButtonUI(){
-        signUpButtonUI.layer.cornerRadius = signUpButtonUI.frame.height / 2
-        signUpButtonUI.clipsToBounds = true
+        signUpButtonUI.configureButton(title: "SignUp",buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
     }
     
     private func setupTermsAndConditionsButtonUI(){

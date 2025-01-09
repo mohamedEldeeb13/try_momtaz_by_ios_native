@@ -18,6 +18,10 @@
 		D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */; };
 		D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */; };
 		D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */; };
+		D342E33A2D2EB6740025EDFE /* StudentDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E3392D2EB6740025EDFE /* StudentDetailsView.swift */; };
+		D342E33C2D2EB6850025EDFE /* StudentDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */; };
+		D342E33E2D2F62770025EDFE /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */; };
+		D342E3402D2F684A0025EDFE /* AddReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */; };
 		D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */; };
 		D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */; };
 		D36E516A2D145FFF007BECC7 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E51692D145FFF007BECC7 /* MainNavigationController.swift */; };
@@ -105,6 +109,10 @@
 		D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExcepression.swift; sourceTree = "<group>"; };
 		D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D342E3392D2EB6740025EDFE /* StudentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsView.swift; sourceTree = "<group>"; };
+		D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentDetailsView.xib; sourceTree = "<group>"; };
+		D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
+		D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReportResponse.swift; sourceTree = "<group>"; };
 		D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
 		D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonTableViewCell.xib; sourceTree = "<group>"; };
 		D36E51692D145FFF007BECC7 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -208,6 +216,15 @@
 				9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D342E3362D2EB33A0025EDFE /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D342E3392D2EB6740025EDFE /* StudentDetailsView.swift */,
+				D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 		D36599312D1E9BB20062B09C /* Custom Components */ = {
@@ -335,6 +352,7 @@
 				D3C17B342D10C2340018BDE5 /* LogInResponse.swift */,
 				D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */,
 				D31B21622D1EA37600E95862 /* LessonResponse.swift */,
+				D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +395,7 @@
 		D3DB469C2D2B5177004C1DA8 /* AddReview */ = {
 			isa = PBXGroup;
 			children = (
+				D342E3362D2EB33A0025EDFE /* CustomComponents */,
 				D3DB46A12D2B5BA2004C1DA8 /* ViewModel */,
 				D3DB46A22D2B5BC0004C1DA8 /* View */,
 			);
@@ -386,6 +405,7 @@
 		D3DB46A12D2B5BA2004C1DA8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -784,6 +804,7 @@
 				D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */,
 				D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */,
 				D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */,
+				D342E33C2D2EB6850025EDFE /* StudentDetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,6 +879,8 @@
 				D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */,
 				D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */,
 				D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */,
+				D342E3402D2F684A0025EDFE /* AddReportResponse.swift in Sources */,
+				D342E33E2D2F62770025EDFE /* AddReviewViewModel.swift in Sources */,
 				D3FA96DF2D011EC30058C8D1 /* Constants.swift in Sources */,
 				D3DB46AF2D2B684A004C1DA8 /* imageViewExtentions.swift in Sources */,
 				D3DC39D92D134DE300E98447 /* MainTabBar.swift in Sources */,
@@ -877,6 +900,7 @@
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
 				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,
 				D3D1A1692D262383003B16E5 /* NoInternetView.swift in Sources */,
+				D342E33A2D2EB6740025EDFE /* StudentDetailsView.swift in Sources */,
 				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
 				D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */,
 				D31B21632D1EA37600E95862 /* LessonResponse.swift in Sources */,

@@ -153,6 +153,7 @@ class WorkAgendaDetailsViewModel {
                 viewController.present(controller, animated: true, completion: nil)
             } else {
                 let controller = AddReviewViewController.instantiat(name: .xib)
+                controller.LessonSession = session
                 viewController.navigationController?.pushViewController(controller, animated: true)
             }
         }

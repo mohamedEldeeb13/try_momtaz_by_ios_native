@@ -40,4 +40,9 @@ class URLs {
     func getCancelLessonUrl(sessionId: String) -> String {
         return baseURL + "api/schedule/cancel-session/\(sessionId)"
     }
+    
+    //MARK: reports page
+    func addLessonReport() -> String {
+        return baseURL + "api/reports/add"
+    }
 }

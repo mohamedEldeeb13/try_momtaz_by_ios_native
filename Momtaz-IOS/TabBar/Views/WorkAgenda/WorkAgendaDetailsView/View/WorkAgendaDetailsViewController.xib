@@ -39,10 +39,10 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-OO-gzI">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="782.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="792.66666666666663"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="abL-9R-0us">
-                                    <rect key="frame" x="16" y="0.0" width="361" height="782.66666666666663"/>
+                                    <rect key="frame" x="16" y="10" width="361" height="782.66666666666663"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="AbY-y2-3LQ">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="782.66666666666663"/>
@@ -293,7 +293,7 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="abL-9R-0us" firstAttribute="top" secondItem="ARn-OO-gzI" secondAttribute="top" id="Ffd-14-tSg"/>
+                                <constraint firstItem="abL-9R-0us" firstAttribute="top" secondItem="ARn-OO-gzI" secondAttribute="top" constant="10" id="Ffd-14-tSg"/>
                                 <constraint firstAttribute="bottom" secondItem="abL-9R-0us" secondAttribute="bottom" id="Pay-dv-tDW"/>
                                 <constraint firstAttribute="trailing" secondItem="abL-9R-0us" secondAttribute="trailing" constant="16" id="bNa-G1-FRI"/>
                                 <constraint firstItem="abL-9R-0us" firstAttribute="leading" secondItem="ARn-OO-gzI" secondAttribute="leading" constant="16" id="joq-Dp-ab3"/>

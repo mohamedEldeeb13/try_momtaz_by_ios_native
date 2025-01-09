@@ -9,4 +9,5 @@ import Foundation
 
 extension Notification.Name {
     static let lessonDeletedSuccessfully = Notification.Name("lessonDeletedSuccessfully")
+    static let addReportSuccessfully = Notification.Name("addReportSuccessfully")
 }

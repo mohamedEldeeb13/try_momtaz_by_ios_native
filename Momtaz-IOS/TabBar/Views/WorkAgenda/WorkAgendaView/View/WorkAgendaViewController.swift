@@ -30,8 +30,7 @@ class WorkAgendaViewController: UIViewController {
         prepareIntailUI()
         allBindingFunctions()
         
-        // Register for the lesson deleted notification
-        NotificationCenter.default.addObserver(self, selector: #selector(didDeleteLessonSuccessfully), name: .lessonDeletedSuccessfully, object: nil)
+       addNotificationObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,9 +38,25 @@ class WorkAgendaViewController: UIViewController {
     }
     
     deinit {
-        // Remove observer when the view controller is deallocated
-        NotificationCenter.default.removeObserver(self, name: .lessonDeletedSuccessfully, object: nil)
+        removeNotificationObserver()
     }
+    
+    //MARK: prepare notification center observable
+    private func addNotificationObserver(){
+        // Register for the lesson deleted notification
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .lessonDeletedSuccessfully, object: nil)
+        
+        // Register for the lesson deleted notification
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .addReportSuccessfully, object: nil)
+    }
+    private func removeNotificationObserver(){
+        // Register for the lesson deleted notification
+        NotificationCenter.default.removeObserver(self, name: .lessonDeletedSuccessfully, object: nil)
+        
+        // Register for the lesson deleted notification
+        NotificationCenter.default.removeObserver(self, name: .addReportSuccessfully, object: nil)
+    }
+    
     //MARK: prepare intail UI
     private func prepareIntailUI(){
         setupDatePickerUI()
@@ -93,9 +108,9 @@ class WorkAgendaViewController: UIViewController {
         }
     }
     
-    //MARK: lesson deleted successfully will do this function
+    //MARK: refresh page when delete or add review or change date is successfully
     
-    @objc private func didDeleteLessonSuccessfully() {
+    @objc private func refreshWorkAgenda() {
         // Assuming you want to refresh the data for the same day that was being viewed
             let currentDate = viewModel.input.workAgendaDayBehavior.value
             // Change the value slightly to trigger the fetch
@@ -162,8 +177,8 @@ extension WorkAgendaViewController {
             }
         }).disposed(by: bag)
     }
-    
-    private func subscribeWithsessionsPublisher() { viewModel.output.sessionsPublisher.subscribe(onNext: { [weak self] sessions in 
+    // for show no lesson view if session list not have any items
+    private func subscribeWithsessionsPublisher() { viewModel.output.sessionsPublisher.subscribe(onNext: { [weak self] sessions in
         guard let self = self else { return }
         self.noLessonsView.isHidden = !sessions.isEmpty
         self.sessionsTableView.isHidden = sessions.isEmpty

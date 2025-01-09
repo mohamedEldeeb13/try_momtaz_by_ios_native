@@ -37,6 +37,11 @@ class WorkAgendaDetailsViewController: UIViewController {
         allBindingFunctions()
         setUpAllIntailUI()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let navigationController = self.navigationController as? MainNavigationController { navigationController.setLogoInTitleView()
+        }
+    }
     
     //MARK: setup intail ui
     private func setUpAllIntailUI(){
@@ -118,7 +123,7 @@ extension WorkAgendaDetailsViewController {
                 if errorMessage == Constants.noInternetConnection {
                     Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
                 }else {
-                    Banner.showErrorBanner(message: "Error Deleting Lesson")
+                    Banner.showErrorBanner(message: "Error while Deleting Lesson")
                 }
             }
             

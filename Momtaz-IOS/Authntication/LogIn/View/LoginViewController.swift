@@ -34,8 +34,7 @@ class LoginViewController: UIViewController{
     }
     // prepare login button
     private func setupLoginButton(){
-        loginButtonUI.layer.cornerRadius = loginButtonUI.frame.height / 2
-        loginButtonUI.clipsToBounds = true
+        loginButtonUI.configureButton(title: "LogIn",buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
     }
     
     

@@ -23,10 +23,10 @@ class MainTabBarViewController : UITabBarController {
     
     private func createAndAddViewControllers() {
         view.backgroundColor = .systemBackground
-        let vc1 = UINavigationController(rootViewController: WorkAgendaViewController())
-        let vc2 = UINavigationController(rootViewController: ReservationsViewController())
-        let vc3 = UINavigationController(rootViewController: ReportsViewController())
-        let vc4 = UINavigationController(rootViewController: StudentsViewController())
+        let vc1 = MainNavigationController(root: WorkAgendaViewController())
+        let vc2 = MainNavigationController(root: ReservationsViewController())
+        let vc3 = MainNavigationController(root: ReportsViewController())
+        let vc4 = MainNavigationController(root: StudentsViewController())
         
         vc1.tabBarItem.image = UIImage(systemName: "calendar")
         vc1.tabBarItem.selectedImage = UIImage(systemName: "calendar")
@@ -34,8 +34,8 @@ class MainTabBarViewController : UITabBarController {
         vc2.tabBarItem.image = UIImage(systemName: "checkmark.circle")
         vc2.tabBarItem.selectedImage = UIImage(systemName: "checkmark.circle.fill")
         
-        vc3.tabBarItem.image = UIImage(systemName: "dollarsign.circle")
-        vc3.tabBarItem.selectedImage = UIImage(systemName: "dollarsign.circle.fill")
+        vc3.tabBarItem.image = UIImage(systemName: "doc.badge.ellipsis")
+        vc3.tabBarItem.selectedImage = UIImage(systemName: "doc.fill.badge.ellipsis")
         
         vc4.tabBarItem.image = UIImage(systemName: "person.2")
         vc4.tabBarItem.selectedImage = UIImage(systemName: "person.3.fill")

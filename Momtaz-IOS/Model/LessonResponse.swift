@@ -20,7 +20,7 @@ struct LessonData : Codable {
     let siteExtra: SiteExtra?
 }
 
-// MARK: - Welcome
+// MARK: - Lesson session
 struct LessonSessions : Codable {
     let id: Int?
     let createdAt, updatedAt: String?
@@ -49,6 +49,19 @@ struct LessonSessions : Codable {
     func prepareLessonDay() -> String{
         let startDate = DateFormatterHelper.convertDateToAsNameString(self.startDate ?? "")
         return startDate ?? "-"
+    }
+    
+    func getLessonDayAndTime() -> String{
+        return "\(prepareLessonDay()) -(\(prepareLessonTime()))"
+    }
+    
+    // prepare lesson duration
+    func prepareLessonDuration() -> String {
+        guard let number = self.booking?.packageDetails?.sessionTime else {
+            return "No duration available"
+        }
+        let durationType = (self.booking?.packageDetails?.sessionTimeUnit == "HOUR") ? "Hour" : "Minute"
+        return "\(number) \(durationType)"
     }
     
     enum CodingKeys: String, CodingKey {
@@ -93,6 +106,12 @@ struct LessonBooking : Codable {
     let student: Student?
     let students: [Student]?
     let subject: Subject?
+    
+    // prepare lesson day
+    func preparePackageType() -> String{
+        let packageType = self.pkgType == "MONTHLY" ? "Monthly" : "Individual class"
+        return packageType
+    }
     
     
     enum CodingKeys: String, CodingKey {
