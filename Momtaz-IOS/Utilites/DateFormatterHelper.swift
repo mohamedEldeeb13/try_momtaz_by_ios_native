@@ -72,12 +72,23 @@ class DateFormatterHelper {
             return false
         }
     }
+    
+    //MARK: 2025-01-12 00:00
+    static func formatStringToDateAndTimeString(_ dateString: String?) -> String {
+        guard let dateString = dateString, !dateString.isEmpty else {
+            return "Invalid date"
+        }
+        
+        let isoFormatter = ISO8601DateFormatter()
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        outputFormatter.locale = Locale(identifier: "en_US")
+        
+        if let date = isoFormatter.date(from: dateString) {
+            return outputFormatter.string(from: date)
+        } else {
+            return "Invalid date format"
+        }
+    }
 }
-
-//let inputDateString = "2024-12-24T00:00:00.000000Z"
-//if let convertedDateString = convertDateString(input: inputDateString) {
-//    print("Converted Date String: \(convertedDateString)")
-//} else {
-//    print("Failed to convert date string")
-//}
 

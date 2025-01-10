@@ -37,7 +37,7 @@ struct LessonSessions : Codable {
      func prepareLessonStartAndEndDate() -> String{
          let startDate = DateFormatterHelper.convertDateStringToTime(self.startDate ?? "")
          let endDate = DateFormatterHelper.convertDateStringToTime(self.endDate ?? "")
-        return "From \(startDate!) To \(endDate!)"
+         return "\(Constants.from) \(startDate!) \(Constants.to) \(endDate!)"
         
     }
     // prepare lesson time
@@ -58,7 +58,7 @@ struct LessonSessions : Codable {
     // prepare lesson duration
     func prepareLessonDuration() -> String {
         guard let number = self.booking?.packageDetails?.sessionTime else {
-            return "No duration available"
+            return Constants.notDurationAvailable
         }
         let durationType = (self.booking?.packageDetails?.sessionTimeUnit == "HOUR") ? "Hour" : "Minute"
         return "\(number) \(durationType)"
@@ -109,7 +109,7 @@ struct LessonBooking : Codable {
     
     // prepare lesson day
     func preparePackageType() -> String{
-        let packageType = self.pkgType == "MONTHLY" ? "Monthly" : "Individual class"
+        let packageType = self.pkgType == "MONTHLY" ? Constants.monthly : Constants.oneClass
         return packageType
     }
     

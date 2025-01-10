@@ -20,7 +20,7 @@ protocol WorkAgendaViewModelProtocol : AnyObject {
 enum WorkAgendaStates {
     case showLoading
     case hideLoading
-    case success
+    case success([LessonSessions])
     case failure(String)
 }
 
@@ -80,7 +80,7 @@ class WorkAgendaViewModel : WorkAgendaViewModelProtocol , ViewModel {
             }
             DispatchQueue.main.async {
                 self.output.sessionsPublisher.onNext(response.data?.sessions ?? [])
-                self.input.workAgendaStatePublisher.onNext(.success)
+                self.input.workAgendaStatePublisher.onNext(.success(response.data?.sessions ?? []))
             }
         }
     }

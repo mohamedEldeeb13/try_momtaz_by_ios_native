@@ -12,9 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddReviewViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
+                <outlet property="generalAssessmentTextLbl" destination="MYs-0i-99c" id="oYM-QT-dv4"/>
+                <outlet property="headTextLbl" destination="S0w-ep-537" id="xzx-i6-NqN"/>
+                <outlet property="knowledgeSubjectTextLbl" destination="hr3-Ys-Kx9" id="V3R-EJ-JWF"/>
                 <outlet property="noteTextField" destination="MTa-ls-trX" id="1GE-Pw-CJu"/>
+                <outlet property="noteTextLbl" destination="oNz-bQ-uIR" id="uUB-lM-7do"/>
+                <outlet property="overAlltextLbl" destination="XDZ-e3-AdK" id="U4w-Xh-rsf"/>
                 <outlet property="saveButton" destination="lM7-hf-uMf" id="gtS-vO-8yb"/>
+                <outlet property="studentAbilityTextLbl" destination="UA8-6N-PCC" id="yJS-9V-b8S"/>
+                <outlet property="studentCommitmentTextLbl" destination="W3j-Yy-y68" id="iZh-tG-LJs"/>
                 <outlet property="studentDetails" destination="7Z0-i0-Ea4" id="PTf-FW-CbA"/>
+                <outlet property="studentDetailsTextLbl" destination="23B-FC-F1w" id="QBU-lf-72B"/>
+                <outlet property="studentEvalutionTextLbl" destination="dc0-Jc-EIY" id="FOS-6J-YD3"/>
+                <outlet property="subHeadTextLbl" destination="qbQ-Bh-fab" id="v6m-RN-yRZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="elevationButtons" destination="gqq-zi-sS5" collectionClass="NSMutableArray" id="1sY-rr-JF2"/>
                 <outletCollection property="elevationButtons" destination="zll-Oc-Gt8" collectionClass="NSMutableArray" id="idf-v2-ITc"/>
@@ -359,7 +369,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-4u-z4n">
                                                     <rect key="frame" x="0.0" y="1021.6666666666667" width="361" height="92"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNz-bQ-uIR">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNz-bQ-uIR">
                                                             <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>

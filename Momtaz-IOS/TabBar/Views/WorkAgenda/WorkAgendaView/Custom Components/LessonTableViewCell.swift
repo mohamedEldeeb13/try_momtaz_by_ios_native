@@ -48,6 +48,7 @@ class LessonTableViewCell: UITableViewCell {
 
     private func prepareIntailUI(isCancelled: String){
         if isCancelled == "CANCELLED" {
+            lessonDateLabel.text = Constants.lesssonCancelled
             lessonCancelledLabel.isHidden = false
 //            lessonDateLabel.textColor = UIColor.red
         }else {

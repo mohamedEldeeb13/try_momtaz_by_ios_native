@@ -13,10 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkAgendaViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
                 <outlet property="datePicker" destination="dt9-vA-9a7" id="VcN-FZ-gNr"/>
+                <outlet property="dateTextLbl" destination="YEx-qe-3Ah" id="SsC-0I-Cmf"/>
                 <outlet property="dateView" destination="poy-e6-uMg" id="Azw-Ga-DnL"/>
+                <outlet property="headTextLbl" destination="k1k-Ia-AFQ" id="Mj9-M1-Bfg"/>
                 <outlet property="noInternetView" destination="coS-eJ-FT2" id="4wd-yI-oWq"/>
                 <outlet property="noLessonsView" destination="ZUj-dL-ZcG" id="d36-5V-NNm"/>
                 <outlet property="sessionsTableView" destination="7Zp-Ln-Tkn" id="xYR-qO-uCl"/>
+                <outlet property="subHeadTextLbl" destination="FTK-Le-vTJ" id="029-eR-F2w"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeLessonDateViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
+                <outlet property="availbleDatesTableView" destination="xBf-Sg-cra" id="uC8-52-QYz"/>
+                <outlet property="datePicker" destination="uXJ-uW-wov" id="S73-iT-OLm"/>
+                <outlet property="noInternetView" destination="IKm-wb-8wm" id="etx-nK-jRl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,49 +22,49 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNX-O1-X44">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-Zz-pzY">
+                    <rect key="frame" x="16" y="69" width="361" height="749"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sR-TF-Tpc">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="uXJ-uW-wov">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="355"/>
+                        </datePicker>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13g-Nu-WZa">
+                            <rect key="frame" x="0.0" y="375.33333333333326" width="361" height="373.66666666666674"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-y5-adt">
-                                    <rect key="frame" x="16" y="0.0" width="361" height="759"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kTm-HD-dqO">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
-                                        </stackView>
-                                    </subviews>
-                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKm-wb-8wm" customClass="NoInternet" customModule="Momtaz_IOS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="373.66666666666669"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-Sg-cra">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="373.66666666666669"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="nQG-y5-adt" secondAttribute="trailing" constant="16" id="6RD-Kl-657"/>
-                                <constraint firstItem="nQG-y5-adt" firstAttribute="top" secondItem="4sR-TF-Tpc" secondAttribute="top" id="9Ke-OW-5Xg"/>
-                                <constraint firstItem="nQG-y5-adt" firstAttribute="leading" secondItem="4sR-TF-Tpc" secondAttribute="leading" constant="16" id="CPK-k7-Zq5"/>
-                                <constraint firstAttribute="bottom" secondItem="nQG-y5-adt" secondAttribute="bottom" id="TPM-84-bD1"/>
+                                <constraint firstAttribute="bottom" secondItem="xBf-Sg-cra" secondAttribute="bottom" id="Fhr-xl-XBm"/>
+                                <constraint firstAttribute="trailing" secondItem="xBf-Sg-cra" secondAttribute="trailing" id="Ngo-zn-nqm"/>
+                                <constraint firstItem="IKm-wb-8wm" firstAttribute="leading" secondItem="13g-Nu-WZa" secondAttribute="leading" id="PW1-Od-d8T"/>
+                                <constraint firstItem="xBf-Sg-cra" firstAttribute="leading" secondItem="13g-Nu-WZa" secondAttribute="leading" id="W4o-Wf-6tC"/>
+                                <constraint firstAttribute="bottom" secondItem="IKm-wb-8wm" secondAttribute="bottom" id="X3s-ri-5ja"/>
+                                <constraint firstItem="IKm-wb-8wm" firstAttribute="top" secondItem="13g-Nu-WZa" secondAttribute="top" id="dKc-dd-luz"/>
+                                <constraint firstAttribute="trailing" secondItem="IKm-wb-8wm" secondAttribute="trailing" id="q3D-YB-tat"/>
+                                <constraint firstItem="xBf-Sg-cra" firstAttribute="top" secondItem="13g-Nu-WZa" secondAttribute="top" id="rRq-dO-0KD"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="top" secondItem="BwP-xv-FZb" secondAttribute="top" id="4RG-gn-aGn"/>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="height" secondItem="eqf-dx-yha" secondAttribute="height" priority="250" id="4TX-d0-bt3"/>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="bottom" secondItem="BwP-xv-FZb" secondAttribute="bottom" id="FWX-Pt-feG"/>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="trailing" secondItem="BwP-xv-FZb" secondAttribute="trailing" id="OmM-sW-Wms"/>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="width" secondItem="eqf-dx-yha" secondAttribute="width" id="R7X-Qq-AgE"/>
-                        <constraint firstItem="4sR-TF-Tpc" firstAttribute="leading" secondItem="BwP-xv-FZb" secondAttribute="leading" id="rKO-UK-o6C"/>
+                        <constraint firstItem="13g-Nu-WZa" firstAttribute="height" secondItem="oHr-Zz-pzY" secondAttribute="height" multiplier="0.498887" id="5r0-m8-Cqv"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="BwP-xv-FZb"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="eqf-dx-yha"/>
-                </scrollView>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CNX-O1-X44" secondAttribute="trailing" id="6Gr-Nf-N2E"/>
-                <constraint firstItem="CNX-O1-X44" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6co-30-EtZ"/>
-                <constraint firstItem="CNX-O1-X44" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RmN-ch-yS0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CNX-O1-X44" secondAttribute="bottom" id="ysx-N5-YXD"/>
+                <constraint firstItem="oHr-Zz-pzY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="JrA-od-KWt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oHr-Zz-pzY" secondAttribute="bottom" id="Srf-Lo-SMP"/>
+                <constraint firstItem="oHr-Zz-pzY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pDg-D7-clo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oHr-Zz-pzY" secondAttribute="trailing" constant="16" id="rSk-gg-ZGT"/>
             </constraints>
             <point key="canvasLocation" x="-13" y="20"/>
         </view>

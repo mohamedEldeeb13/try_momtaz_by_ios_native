@@ -13,6 +13,18 @@ import ProgressHUD
 class AddReviewViewController: UIViewController {
     
     //MARK: components outlet
+    
+    @IBOutlet weak var headTextLbl: UILabel!
+    @IBOutlet weak var subHeadTextLbl: UILabel!
+    @IBOutlet weak var studentDetailsTextLbl: UILabel!
+    @IBOutlet weak var studentEvalutionTextLbl: UILabel!
+    @IBOutlet weak var knowledgeSubjectTextLbl: UILabel!
+    @IBOutlet weak var studentAbilityTextLbl: UILabel!
+    @IBOutlet weak var studentCommitmentTextLbl: UILabel!
+    @IBOutlet weak var overAlltextLbl: UILabel!
+    @IBOutlet weak var generalAssessmentTextLbl: UILabel!
+    @IBOutlet weak var noteTextLbl: UILabel!
+    
     @IBOutlet weak var studentDetails: StudentDetailsView!
     @IBOutlet var elevationButtons: [UIButton]!
     @IBOutlet weak var noteTextField: UITextField!
@@ -43,6 +55,16 @@ class AddReviewViewController: UIViewController {
     
     //MARK: setUp intail UI
     private func setUpIntailUI(){
+        headTextLbl.text = Constants.addReviewHeadText
+        subHeadTextLbl.text = Constants.addReviewSubHeadText
+        studentDetailsTextLbl.text = Constants.studentDetails
+        studentEvalutionTextLbl.text = Constants.studentEvaluation
+        knowledgeSubjectTextLbl.text = Constants.ratingGroup1Title
+        studentAbilityTextLbl.text = Constants.ratingGroup2Title
+        studentCommitmentTextLbl.text = Constants.ratingGroup3Title
+        overAlltextLbl.text = Constants.overAllAssessment
+        generalAssessmentTextLbl.text = Constants.ratingGroup4Title
+        noteTextLbl.text = Constants.note
         setUpStyleOfButtons()
         setUpNoteTextFieldUI()
         setUpSaveButtonUI()
@@ -69,7 +91,7 @@ class AddReviewViewController: UIViewController {
     }
     // save button ui
     private func setUpSaveButtonUI(){
-        saveButton.configureButton(title: "Save" , buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
+        saveButton.configureButton(title: Constants.save , buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
         saveButton.addTarget(self, action: #selector(saveButtonPressed), for: .touchUpInside)
     }
     // textfield ui
@@ -82,7 +104,7 @@ class AddReviewViewController: UIViewController {
         let placeholderAttribue : [NSAttributedString.Key : Any] = [
             .font: placeholderFont
         ]
-        noteTextField.attributedPlaceholder = NSAttributedString(string: "Please add your notes about the class here.", attributes: placeholderAttribue)
+        noteTextField.attributedPlaceholder = NSAttributedString(string: Constants.addNoteMessage, attributes: placeholderAttribue)
         
         noteTextField.layer.borderColor = UIColor.label.cgColor
         noteTextField.layer.borderWidth = 1
@@ -163,17 +185,17 @@ extension AddReviewViewController {
             
             switch addReviewStates {
             case .showLoading:
-                ProgressHUD.animate("Loading...")
+                ProgressHUD.animate(Constants.loading)
             case .hideLoading:
                 ProgressHUD.dismiss()
             case .success:
                 self.navigationController?.popToRootViewController(animated: true)
-                Banner.showSuccessBanner(message: "student report added successfully")
+                Banner.showSuccessBanner(message: Constants.addStudentReportSuccessfully)
                 // Post a notification to refresh the main agenda
                 NotificationCenter.default.post(name: .addReportSuccessfully, object: nil)
             case .failure(let errorMessage ):
                 print("Error: \(errorMessage)")
-                if errorMessage == Constants.noInternetConnection || errorMessage == "Please enter all student evaluations" {
+                if errorMessage == Constants.noInternetConnection || errorMessage == Constants.addAllStudentReportDetails {
                     print(errorMessage)
                     Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
                 }else {

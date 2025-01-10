@@ -12,9 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
+                <outlet property="forgetPasswordButtonUI" destination="NUd-6H-ORk" id="CF9-T2-SWj"/>
+                <outlet property="headTextLbl" destination="x8T-wi-Ekm" id="s3W-Mv-59q"/>
                 <outlet property="loginButtonUI" destination="qqr-Xs-0Vh" id="WT7-Tg-uBP"/>
+                <outlet property="notHaveAccountButtonUI" destination="7Fy-LP-Sbh" id="AKp-jd-adM"/>
                 <outlet property="passwordTextFieldView" destination="kW5-Wq-SLW" id="91D-gp-dyx"/>
+                <outlet property="passwordTextLbl" destination="7q7-Nf-cKq" id="0jX-H5-aav"/>
                 <outlet property="phoneNumberTextFieldView" destination="7Y1-X0-8nk" id="tVF-dS-Vqu"/>
+                <outlet property="phoneTextLbl" destination="Dal-t4-tSR" id="CcD-vt-Kdk"/>
+                <outlet property="subHeadTextLbl" destination="qtQ-My-A2I" id="tdR-VL-SoO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -123,10 +129,10 @@
                                                     <rect key="frame" x="0.0" y="286" width="361" height="29"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUd-6H-ORk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="121" height="29"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="Forget Password?">
+                                                            <state key="normal" title="Forget Password">
                                                                 <color key="titleColor" name="dark_grey"/>
                                                             </state>
                                                             <connections>
@@ -157,7 +163,7 @@
                                                             <rect key="frame" x="0.0" y="65" width="361" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="Not have account? SignUp">
+                                                            <state key="normal" title="Not have account? ">
                                                                 <color key="titleColor" name="dark_grey"/>
                                                             </state>
                                                             <connections>

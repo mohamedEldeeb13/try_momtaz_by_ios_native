@@ -94,13 +94,13 @@ class Banner {
     }
     
     // Error Banner
-    static func showErrorBanner(message: String, title: String = "Error" ,  completion: (() -> Void)? = nil) {
+    static func showErrorBanner(message: String, title: String = Constants.error ,  completion: (() -> Void)? = nil) {
          createBanner(message: message, title: title, iconName: "multiply.circle.fill", titleColor: .textRed, iconColor: .textRed , completion: completion)
         
     }
     
     // Success Banner
-    static func showSuccessBanner(message: String, title: String = "Success" , completion: (() -> Void)? = nil) {
+    static func showSuccessBanner(message: String, title: String = Constants.success , completion: (() -> Void)? = nil) {
         createBanner(message: message, title: title, iconName: "checkmark.circle.fill", titleColor: .systemGreen, iconColor: .systemGreen , completion: completion)
     }
 

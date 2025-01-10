@@ -10,6 +10,15 @@ import UIKit
 class ShowReviewViewController: UIViewController {
 
     //MARK: components outlet
+    
+    @IBOutlet weak var headTextLbl: UILabel!
+    @IBOutlet weak var knowldgeSubjectTextLbl: UILabel!
+    @IBOutlet weak var studentAbilityTextLbl: UILabel!
+    @IBOutlet weak var studentCommitmentTextLbl: UILabel!
+    @IBOutlet weak var overAllTextLbl: UILabel!
+    @IBOutlet weak var noteTextLbl: UILabel!
+    
+    
     @IBOutlet weak var knowledgeOfSubjectLabel: UILabel!
     @IBOutlet weak var comprehensionAbilityLabel: UILabel!
     @IBOutlet weak var studentCommitmentLabel: UILabel!
@@ -22,8 +31,17 @@ class ShowReviewViewController: UIViewController {
     //MARK: page life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpIntailUI()
        setupIntailData(report: studentReport)
+    }
+    
+    private func setUpIntailUI(){
+        headTextLbl.text = Constants.showReviewHeadText
+        knowldgeSubjectTextLbl.text = Constants.knowledgeOfSubject
+        studentAbilityTextLbl.text = Constants.studentComprehensionAbility
+        studentCommitmentTextLbl.text = Constants.studentCommitment
+        overAllTextLbl.text = Constants.overAllAssessment
+        noteTextLbl.text = Constants.note + ":"
     }
 
 

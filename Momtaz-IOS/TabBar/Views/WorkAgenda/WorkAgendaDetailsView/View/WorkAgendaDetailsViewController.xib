@@ -17,16 +17,24 @@
                 <outlet property="changeLessonDateButton" destination="IWi-Zj-mLm" id="FoB-zt-LYQ"/>
                 <outlet property="chatParentButton" destination="tmQ-pO-xYV" id="cl2-2x-ckR"/>
                 <outlet property="dateLabel" destination="8Pq-7q-Igo" id="FAy-KN-XCn"/>
+                <outlet property="dateTextLbl" destination="0qT-qI-Kx6" id="b1j-7y-Drn"/>
                 <outlet property="deleteLessonButton" destination="hth-vI-W61" id="Rnn-lb-hBA"/>
                 <outlet property="lessonCancelledLabel" destination="eMm-Zw-gAx" id="K8y-z1-bEw"/>
                 <outlet property="levelLabel" destination="rSI-Gq-ncL" id="TEj-kJ-Umk"/>
+                <outlet property="levelTextLbl" destination="VXm-4L-zJZ" id="6dX-4M-Hw4"/>
                 <outlet property="locationLabel" destination="Jwa-Y1-XJr" id="aIy-9b-o8h"/>
+                <outlet property="locationTextLbl" destination="dBL-Ic-EKX" id="Kfi-x0-mbd"/>
+                <outlet property="nameTextLbl" destination="bEr-D1-dRF" id="oXG-ci-24h"/>
                 <outlet property="parentName" destination="IDg-eJ-gUd" id="hCq-ZM-cAF"/>
+                <outlet property="parentTextLbl" destination="VLq-FU-Qh7" id="4yt-Hn-hnZ"/>
                 <outlet property="priceLabel" destination="g5S-Ct-XX4" id="vEg-40-JpI"/>
+                <outlet property="priceTextLbl" destination="sfB-Z4-VCw" id="uAG-cB-99P"/>
                 <outlet property="studentImage" destination="scT-Ix-7xc" id="hS5-Qj-iQb"/>
                 <outlet property="studentName" destination="tDb-cE-RfL" id="iwU-hJ-KfJ"/>
                 <outlet property="subjectLabel" destination="OQF-1M-TbD" id="Dun-DH-vxP"/>
+                <outlet property="subjectTextLbl" destination="W5g-v7-UF2" id="98K-lU-dLg"/>
                 <outlet property="timeLabel" destination="jrD-Xi-30v" id="Jcx-cF-9EZ"/>
+                <outlet property="timeTextLbl" destination="Xdj-Q9-oCU" id="kjv-Xy-ZIu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

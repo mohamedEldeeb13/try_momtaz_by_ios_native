@@ -22,7 +22,7 @@ class NoLessonsToDay: UIView {
     
     private let label1: UILabel = {
         let label = UILabel()
-        label.text = "There are no lessons today"
+        label.text = Constants.noLessonHeadText
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class NoLessonsToDay: UIView {
     
     private let label2: UILabel = {
         let label = UILabel()
-        label.text = "Enjoy your free time!"
+        label.text = Constants.enjoyTime
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false

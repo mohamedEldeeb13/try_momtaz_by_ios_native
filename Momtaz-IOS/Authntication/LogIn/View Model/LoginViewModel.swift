@@ -81,7 +81,7 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
             
         let loginURL = URLs.shared.getLoginURL()
         let loginParameters: [String: Any] = [
-            "email": self.input.phoneNumberTextBehavorail.value + "@momtaz.com",
+            "email": self.input.phoneNumberTextBehavorail.value + URLs.shared.completeEmail,
             "password": self.input.passwordTextBehavorail.value
         ]
             
@@ -96,10 +96,10 @@ class LoginViewModel : LoginViewModelProtocol , ViewModel {
     //              Complete the stream (no more updates will be sent)
                     self.input.LoginStatesPublisher.onCompleted()
                 }else{
-                    self.input.LoginStatesPublisher.onNext(.failure("not have token please try in another time"))
+                    self.input.LoginStatesPublisher.onNext(.failure(Constants.notHaveToken))
                 }
             }else{
-                self.input.LoginStatesPublisher.onNext(.failure("Your email or password is incorrect"))
+                self.input.LoginStatesPublisher.onNext(.failure(Constants.FailedToLogin))
             }
         }
     }

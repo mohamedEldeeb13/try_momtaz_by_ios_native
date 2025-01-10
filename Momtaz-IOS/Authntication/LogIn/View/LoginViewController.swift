@@ -13,6 +13,12 @@ import ProgressHUD
 class LoginViewController: UIViewController{
     
     //MARK: components outlet
+    @IBOutlet weak var headTextLbl: UILabel!
+    @IBOutlet weak var subHeadTextLbl: UILabel!
+    @IBOutlet weak var phoneTextLbl: UILabel!
+    @IBOutlet weak var passwordTextLbl: UILabel!
+    @IBOutlet weak var forgetPasswordButtonUI: UIButton!
+    @IBOutlet weak var notHaveAccountButtonUI: UIButton!
     @IBOutlet weak var phoneNumberTextFieldView: RoundedTextField!
     @IBOutlet weak var passwordTextFieldView: RoundedTextField!
     @IBOutlet weak var loginButtonUI: UIButton!
@@ -30,11 +36,18 @@ class LoginViewController: UIViewController{
     //MARK: setup intail design
     
     private func setupIntailUI(){
+        headTextLbl.text = Constants.loginHeadText
+        subHeadTextLbl.text = Constants.loginSubHeadText
+        phoneTextLbl.text = Constants.phoneNumber
+        passwordTextLbl.text = Constants.password
+        forgetPasswordButtonUI.setTitle(Constants.forgetPassword, for: .normal)
+        notHaveAccountButtonUI.setTitle(Constants.notHaveAcccount, for: .normal)
+        
         setupLoginButton()
     }
     // prepare login button
     private func setupLoginButton(){
-        loginButtonUI.configureButton(title: "LogIn",buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
+        loginButtonUI.configureButton(title: Constants.login,buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
     }
     
     
@@ -85,7 +98,7 @@ extension LoginViewController {
             guard let self = self else{return}
             switch loginStates {
             case .showLoading:
-                ProgressHUD.animate("Loading...")
+                ProgressHUD.animate(Constants.loading)
             case .hideLoading:
                 ProgressHUD.dismiss()
             case .success:

@@ -58,7 +58,7 @@ class AddReviewViewModel : AddReviewProtocol , ViewModel {
                 let _ = input.studentCommitmentValue.value,
                 let _ = input.overAllValue.value,
                 let notes = input.notesTextBehavorail.value, !notes.isEmpty else { // Ensure `notes` is not empty
-                    self.input.addReviewStatesPublisher.onNext(.failure("Please enter all student evaluations"))
+            self.input.addReviewStatesPublisher.onNext(.failure(Constants.addAllStudentReportDetails))
                     return
                 }
         
@@ -96,10 +96,10 @@ class AddReviewViewModel : AddReviewProtocol , ViewModel {
     //              Complete the stream (no more updates will be sent)
                     self.input.addReviewStatesPublisher.onCompleted()
                 }else{
-                    self.input.addReviewStatesPublisher.onNext(.failure("error while add student report"))
+                    self.input.addReviewStatesPublisher.onNext(.failure(Constants.failedToAddStudentReport))
                 }
             }else{
-                self.input.addReviewStatesPublisher.onNext(.failure("error while add student report"))
+                self.input.addReviewStatesPublisher.onNext(.failure(Constants.failedToAddStudentReport))
             }
         }
     }

@@ -13,6 +13,10 @@ import ProgressHUD
 class WorkAgendaViewController: UIViewController {
     
     //MARK: Page Outlets
+    
+    @IBOutlet weak var headTextLbl: UILabel!
+    @IBOutlet weak var subHeadTextLbl: UILabel!
+    @IBOutlet weak var dateTextLbl: UILabel!
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var noInternetView: NoInternet!
@@ -59,6 +63,9 @@ class WorkAgendaViewController: UIViewController {
     
     //MARK: prepare intail UI
     private func prepareIntailUI(){
+        headTextLbl.text = Constants.workAgendaHeadText
+        subHeadTextLbl.text = Constants.workAgendaSubHeadText
+        dateTextLbl.text = Constants.date
         setupDatePickerUI()
         setUpTableViewUI()
         setupRegisterTabelViewCell()
@@ -90,7 +97,6 @@ class WorkAgendaViewController: UIViewController {
         let formattedDate = formatter.string(from: selectedDate)
         print("Selected Date: \(formattedDate)")  // Prints date in dd-MM-yyyy format
         self.dismiss(animated: false) // Automatically close the date picker
-        viewModel.input.workAgendaDayBehavior.accept(formattedDate)
         
     }
     
@@ -126,7 +132,6 @@ extension WorkAgendaViewController {
     private func allBindingFunctions(){
         bindToViewModel()
         subscribeWithWorkAgendaStates()
-        subscribeWithsessionsPublisher()
         subscribeWithTableView()
         subscribeWithTableViewDidSet()
         
@@ -161,11 +166,14 @@ extension WorkAgendaViewController {
             switch workAgendaState {
             case .showLoading:
                 self.view.isUserInteractionEnabled = false
-                ProgressHUD.animate("Loading...")
+                ProgressHUD.animate(Constants.loading)
             case .hideLoading:
                 self.view.isUserInteractionEnabled = true
                 ProgressHUD.dismiss()
-            case .success:
+            case .success(let sessions):
+                self.noLessonsView.isHidden = !sessions.isEmpty
+                self.noInternetView.isHidden = true
+                self.sessionsTableView.isHidden = sessions.isEmpty
                 sessionsTableView.reloadData()
             case .failure(let error):
                 if error == Constants.noInternetConnection{
@@ -177,13 +185,4 @@ extension WorkAgendaViewController {
             }
         }).disposed(by: bag)
     }
-    // for show no lesson view if session list not have any items
-    private func subscribeWithsessionsPublisher() { viewModel.output.sessionsPublisher.subscribe(onNext: { [weak self] sessions in
-        guard let self = self else { return }
-        self.noLessonsView.isHidden = !sessions.isEmpty
-        self.sessionsTableView.isHidden = sessions.isEmpty
-        self.noInternetView.isHidden = sessions.isEmpty
-    }).disposed(by: bag)
-    }
-
 }

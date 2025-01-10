@@ -13,10 +13,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowReviewViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
                 <outlet property="comprehensionAbilityLabel" destination="2jK-Xc-S9j" id="cmF-Zy-uLM"/>
+                <outlet property="headTextLbl" destination="Lcy-4u-04d" id="tFZ-Zb-pXY"/>
+                <outlet property="knowldgeSubjectTextLbl" destination="8tx-GT-ftP" id="2ej-a2-FtS"/>
                 <outlet property="knowledgeOfSubjectLabel" destination="qbx-ac-don" id="Lmj-bN-Muf"/>
                 <outlet property="noteLabel" destination="Yrs-tT-7Yd" id="TfY-sa-PvW"/>
+                <outlet property="noteTextLbl" destination="fmm-mG-1DZ" id="L2j-eo-PEJ"/>
                 <outlet property="ovelallLabel" destination="BCo-uV-zKw" id="o7E-v0-RWK"/>
+                <outlet property="overAllTextLbl" destination="Ghn-jh-Txn" id="fJV-HY-FkA"/>
+                <outlet property="studentAbilityTextLbl" destination="5xi-zv-6sw" id="Lhf-4V-bsO"/>
                 <outlet property="studentCommitmentLabel" destination="XQc-70-kHd" id="IQE-2s-bV1"/>
+                <outlet property="studentCommitmentTextLbl" destination="w0q-dk-J4n" id="HZn-6c-Z7Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,26 +38,19 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="udF-Hl-xkE">
-                                    <rect key="frame" x="16" y="0.0" width="361" height="759"/>
+                                    <rect key="frame" x="16" y="40" width="361" height="719"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-Yh-wQa">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="328"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="268"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0t-rz-8di">
-                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="hAp-4e-YYr"/>
-                                                    </constraints>
-                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Informations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-4u-04d">
-                                                    <rect key="frame" x="0.0" y="60" width="361" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OTL-h7-DGi">
-                                                    <rect key="frame" x="0.0" y="104" width="361" height="36"/>
+                                                    <rect key="frame" x="0.0" y="44" width="361" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="student knowledge of the scientific subject:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tx-GT-ftP">
                                                             <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="36"/>
@@ -68,7 +67,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DAy-6b-N4L">
-                                                    <rect key="frame" x="0.0" y="160" width="361" height="36"/>
+                                                    <rect key="frame" x="0.0" y="100" width="361" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student comprehension ability:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xi-zv-6sw">
                                                             <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="36"/>
@@ -85,7 +84,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5A3-aK-mtR">
-                                                    <rect key="frame" x="0.0" y="216" width="361" height="36"/>
+                                                    <rect key="frame" x="0.0" y="156" width="361" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The extent of the student commitment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-dk-J4n">
                                                             <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="36"/>
@@ -102,7 +101,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZPr-Eu-dWM">
-                                                    <rect key="frame" x="0.0" y="272" width="361" height="18"/>
+                                                    <rect key="frame" x="0.0" y="212" width="361" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="overall assessment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghn-jh-Txn">
                                                             <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="18"/>
@@ -119,7 +118,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tac-RH-TGr">
-                                                    <rect key="frame" x="0.0" y="310" width="361" height="18"/>
+                                                    <rect key="frame" x="0.0" y="250" width="361" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmm-mG-1DZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="18"/>
@@ -145,7 +144,7 @@
                                 <constraint firstAttribute="bottom" secondItem="udF-Hl-xkE" secondAttribute="bottom" id="5vw-7W-9om"/>
                                 <constraint firstItem="udF-Hl-xkE" firstAttribute="leading" secondItem="lAc-Rm-wwk" secondAttribute="leading" constant="16" id="WCQ-cP-zQo"/>
                                 <constraint firstAttribute="trailing" secondItem="udF-Hl-xkE" secondAttribute="trailing" constant="16" id="anv-iZ-cmA"/>
-                                <constraint firstItem="udF-Hl-xkE" firstAttribute="top" secondItem="lAc-Rm-wwk" secondAttribute="top" id="rww-oh-06g"/>
+                                <constraint firstItem="udF-Hl-xkE" firstAttribute="top" secondItem="lAc-Rm-wwk" secondAttribute="top" constant="40" id="rww-oh-06g"/>
                             </constraints>
                         </view>
                     </subviews>

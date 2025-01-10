@@ -13,11 +13,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Momtaz_IOS" customModuleProvider="target">
             <connections>
                 <outlet property="confirmPasswordTextFieldView" destination="qL5-nS-yNm" id="hzH-Qh-y8M"/>
+                <outlet property="confirmPasswordTextLbl" destination="RzW-wb-s1J" id="L9l-vq-PYx"/>
                 <outlet property="fullNameTextFieldView" destination="ECb-RG-3wf" id="AIq-JF-F3U"/>
+                <outlet property="fullNameTextLbl" destination="qLk-vA-AYn" id="3R9-KX-kSz"/>
+                <outlet property="haveAlreadyButtonUi" destination="kwc-cp-chY" id="YcD-dj-Izc"/>
+                <outlet property="headTextLbl" destination="SGy-YV-5ae" id="ofl-4h-8dz"/>
                 <outlet property="passwordTextFieldView" destination="f3i-EH-y0e" id="ZqQ-VO-tUJ"/>
+                <outlet property="passwordTextLbl" destination="cIm-1P-Q8g" id="0Lh-Bf-VAN"/>
                 <outlet property="phoneNumberTextFieldView" destination="DDA-WB-vKg" id="qYq-sU-BEB"/>
+                <outlet property="phoneNumberTextLbl" destination="a9t-NE-9eP" id="bPp-0W-Tg6"/>
                 <outlet property="signUpButtonUI" destination="NdW-eJ-mNL" id="gkc-xE-4jO"/>
+                <outlet property="subHeadTextLbl" destination="5Uj-Fr-UoD" id="cUy-kA-FAk"/>
                 <outlet property="termsAndConditionButtonUI" destination="5gn-0X-CtX" id="96K-x4-Yhs"/>
+                <outlet property="termsAndConditionsTextLbl" destination="50t-AR-MfA" id="K5i-aD-i5X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

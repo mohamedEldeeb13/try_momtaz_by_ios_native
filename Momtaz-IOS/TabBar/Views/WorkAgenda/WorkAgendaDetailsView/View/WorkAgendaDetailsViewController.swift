@@ -13,14 +13,23 @@ class WorkAgendaDetailsViewController: UIViewController {
     //MARK: components outlet
     @IBOutlet weak var lessonCancelledLabel: UILabel!
     @IBOutlet weak var studentImage: UIImageView!
+    @IBOutlet weak var nameTextLbl: UILabel!
     @IBOutlet weak var studentName: UILabel!
+    @IBOutlet weak var locationTextLbl: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var levelTextLbl: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var subjectTextLbl: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var timeTextLbl: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateTextLbl: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var parentTextLbl: UILabel!
     @IBOutlet weak var parentName: UILabel!
+    @IBOutlet weak var priceTextLbl: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
     @IBOutlet weak var addOrShowReviewButton: UIButton!
     @IBOutlet weak var changeLessonDateButton: UIButton!
     @IBOutlet weak var deleteLessonButton: UIButton!
@@ -45,6 +54,14 @@ class WorkAgendaDetailsViewController: UIViewController {
     
     //MARK: setup intail ui
     private func setUpAllIntailUI(){
+        nameTextLbl.text = Constants.name
+        locationTextLbl.text = Constants.location
+        levelTextLbl.text = Constants.level
+        subjectTextLbl.text = Constants.subject
+        timeTextLbl.text = Constants.hour
+        dateTextLbl.text = Constants.date
+        parentTextLbl.text = Constants.parent
+        priceTextLbl.text = Constants.price
         setUpImageView()
         setUpButtonsUi()
     }
@@ -54,15 +71,15 @@ class WorkAgendaDetailsViewController: UIViewController {
     }
     // buttons ui
     private func setUpButtonsUi(){
-        callingParentButton.configureButton(title: "Call Parent", buttonBackgroundColor: .authPurple,haveBorder: false)
+        callingParentButton.configureButton(title: Constants.callParent, buttonBackgroundColor: .authPurple,haveBorder: false)
         callingParentButton.addTarget(self, action: #selector(callingParentButtonTapped), for: .touchUpInside)
-        chatParentButton.configureButton(title: "Message Parent", buttonBackgroundColor: .authPurple,haveBorder: false)
+        chatParentButton.configureButton(title: Constants.messageParent, buttonBackgroundColor: .authPurple,haveBorder: false)
         chatParentButton.addTarget(self, action: #selector(messageToParentButtonTapped), for: .touchUpInside)
         addOrShowReviewButton.configureButton(title: "Review", buttonBackgroundColor: .authPurple,haveBorder: false)
         addOrShowReviewButton.addTarget(self, action: #selector(addOrShowReviewButtonTapped), for: .touchUpInside)
-        changeLessonDateButton.configureButton(title: "Change Date", haveBorder: true)
+        changeLessonDateButton.configureButton(title: Constants.changeLessonDate, haveBorder: true)
         changeLessonDateButton.addTarget(self, action: #selector(changeDateButtonTapped), for: .touchUpInside)
-        deleteLessonButton.configureButton(title: "Delete Lesson", titleColor: .textRed, buttonBackgroundColor: .backgroundRed, icon: "multiply.circle", iconColor: .textRed, haveBorder: false)
+        deleteLessonButton.configureButton(title: Constants.deleteLesson, titleColor: .textRed, buttonBackgroundColor: .backgroundRed, icon: "multiply.circle", iconColor: .textRed, haveBorder: false)
         deleteLessonButton.addTarget(self, action: #selector(deleteLessonButtonTapped), for: .touchUpInside)
     }
 }
@@ -110,20 +127,20 @@ extension WorkAgendaDetailsViewController {
             
             switch deleteLessonResult {
             case .showHud:
-                ProgressHUD.animate("Loading...")
+                ProgressHUD.animate(Constants.loading)
             case .hideHud:
                 ProgressHUD.dismiss()
             case .success:
                 // pop to the previous view
                 self.navigationController?.popViewController(animated: true)
-                Banner.showSuccessBanner(message: "Lesson Deleted Successfully")
+                Banner.showSuccessBanner(message: Constants.lessonDeleteSuccessfully)
                 // Post a notification to refresh the main agenda
                 NotificationCenter.default.post(name: .lessonDeletedSuccessfully, object: nil)
             case .failure(let errorMessage):
                 if errorMessage == Constants.noInternetConnection {
                     Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
                 }else {
-                    Banner.showErrorBanner(message: "Error while Deleting Lesson")
+                    Banner.showErrorBanner(message: Constants.failedDeleteLesson)
                 }
             }
             
@@ -147,6 +164,7 @@ extension WorkAgendaDetailsViewController {
             parentName.text = viewModel.parentName
             priceLabel.text = viewModel.price
             // Update button states
+            lessonCancelledLabel.text = Constants.lesssonCancelled
             lessonCancelledLabel.isHidden = !viewModel.isLessonCancelled
             addOrShowReviewButton.isHidden = viewModel.isAddOrShowReviewHidden
             changeLessonDateButton.isHidden = viewModel.isChangeLessonDateHidden

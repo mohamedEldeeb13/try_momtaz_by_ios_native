@@ -14,7 +14,7 @@ class URLs {
     
     let baseURL = "https://dev.getmomtaz.com/"
     private let baseImageURL = "https://dev.getmomtaz.com/storage/"
-    private var endPoint = ""
+    let completeEmail = "@momtaz.com"
     
     //MARK: prepare image or video or pdf url
     func  getPhotoOrVideoOrPdfURL(path: String) -> String{
@@ -39,6 +39,10 @@ class URLs {
     
     func getCancelLessonUrl(sessionId: String) -> String {
         return baseURL + "api/schedule/cancel-session/\(sessionId)"
+    }
+    
+    func getAvailabileLessonDatesInDay() -> String {
+        return baseURL + "api/schedule/availabile-slots"
     }
     
     //MARK: reports page

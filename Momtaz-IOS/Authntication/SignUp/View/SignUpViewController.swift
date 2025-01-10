@@ -11,8 +11,17 @@ import RxCocoa
 import ProgressHUD
 
 class SignUpViewController: UIViewController {
+    
     //MARK: components outlet
-//    @IBOutlet weak var scrollViewController: UIScrollView!
+    @IBOutlet weak var headTextLbl: UILabel!
+    @IBOutlet weak var subHeadTextLbl: UILabel!
+    @IBOutlet weak var fullNameTextLbl: UILabel!
+    @IBOutlet weak var phoneNumberTextLbl: UILabel!
+    @IBOutlet weak var passwordTextLbl: UILabel!
+    @IBOutlet weak var confirmPasswordTextLbl: UILabel!
+    @IBOutlet weak var termsAndConditionsTextLbl: UILabel!
+    @IBOutlet weak var haveAlreadyButtonUi: UIButton!
+    
     @IBOutlet weak var fullNameTextFieldView: RoundedTextField!
     @IBOutlet weak var phoneNumberTextFieldView: RoundedTextField!
     @IBOutlet weak var passwordTextFieldView: RoundedTextField!
@@ -38,13 +47,21 @@ class SignUpViewController: UIViewController {
     
     //MARK: Design
     private func setupIntailUI(){
+        headTextLbl.text = Constants.signUpHeadText
+        subHeadTextLbl.text = Constants.signUpSubHeadText
+        fullNameTextLbl.text = Constants.fullName
+        phoneNumberTextLbl.text = Constants.phoneNumber
+        passwordTextLbl.text = Constants.password
+        confirmPasswordTextLbl.text = Constants.confirmPassword
+        termsAndConditionsTextLbl.text = Constants.termsAndConditions
+        haveAlreadyButtonUi.setTitle(Constants.alreadyHaveAccount, for: .normal)
         setupSignupButtonUI()
         setupTermsAndConditionsButtonUI()
     }
     
     // prepare login button
     private func setupSignupButtonUI(){
-        signUpButtonUI.configureButton(title: "SignUp",buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
+        signUpButtonUI.configureButton(title: Constants.signup,buttonBackgroundColor: .authPurple, titleFont: UIFont.systemFont(ofSize: 17 , weight: .semibold), buttonCornerRaduis: 20, haveBorder: false)
     }
     
     private func setupTermsAndConditionsButtonUI(){
@@ -103,7 +120,7 @@ extension SignUpViewController {
             guard let self = self else{return}
             switch SignUpStates {
             case .showLoading:
-                ProgressHUD.animate("Loading...")
+                ProgressHUD.animate(Constants.loading)
             case .hideLoading:
                 ProgressHUD.dismiss()
             case .success:

@@ -53,7 +53,7 @@ class WorkAgendaDetailsViewModel {
                     self.bindCancelSessionResultToViewController?(.success)
                 }
             }else{
-                let errorMessage = "Failed to delete lesson"
+                let errorMessage = Constants.failedDeleteLesson
                 self.bindCancelSessionResultToViewController?(.failure(errorMessage))
                 
             }
@@ -114,7 +114,7 @@ class WorkAgendaDetailsViewModel {
        var addOrShowReviewTitle: String {
            guard let session = session else { return "" }
            let isReported = session.isReported ?? false
-           return isReported ? "Show Review" : "Add Review"
+           return isReported ? Constants.showReview : Constants.addReview
        }
     
     // MARK: - Methods to handle button actions
@@ -164,7 +164,7 @@ class WorkAgendaDetailsViewModel {
         }
         
     func deleteLesson(viewController: UIViewController) {
-            Alert.showAlertWithNegativeAndPositiveButtons(on: viewController, title: Constants.warning, message: "You will delete student lesson, are you sure?", positiveButtonTitle: "Delete lesson", negativeButtonTitle: Constants.cancel , positiveButtonStyle: .destructive, positiveHandler: { _ in
+        Alert.showAlertWithNegativeAndPositiveButtons(on: viewController, title: Constants.warning, message: Constants.warningMessageToDeleteLesson, positiveButtonTitle: Constants.deleteLesson, negativeButtonTitle: Constants.cancel , positiveButtonStyle: .destructive, positiveHandler: { _ in
                 self.cancelSession()
             })
         }

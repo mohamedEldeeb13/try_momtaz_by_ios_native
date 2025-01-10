@@ -29,6 +29,10 @@
 		D37F461E2D2CC6FF001E294A /* CustomBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F461D2D2CC6FF001E294A /* CustomBannerView.swift */; };
 		D37F46212D2CE20E001E294A /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F46202D2CE20E001E294A /* NotificationCenterExtentions.swift */; };
 		D38262AF2D041F980086CB1E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38262AE2D041F980086CB1E /* Alert.swift */; };
+		D392D64C2D3082710063B447 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392D64A2D3082710063B447 /* DateTableViewCell.swift */; };
+		D392D64D2D3082710063B447 /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D392D64B2D3082710063B447 /* DateTableViewCell.xib */; };
+		D392D64F2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392D64E2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift */; };
+		D392D6512D308AF10063B447 /* ChangeLessonDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392D6502D308AF10063B447 /* ChangeLessonDateViewModel.swift */; };
 		D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */; };
 		D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */; };
 		D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01AFB2D05D786008AE4A0 /* SignUpViewController.swift */; };
@@ -120,6 +124,10 @@
 		D37F461D2D2CC6FF001E294A /* CustomBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBannerView.swift; sourceTree = "<group>"; };
 		D37F46202D2CE20E001E294A /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
 		D38262AE2D041F980086CB1E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D392D64A2D3082710063B447 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		D392D64B2D3082710063B447 /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
+		D392D64E2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabileLessonTimePerDayResponse.swift; sourceTree = "<group>"; };
+		D392D6502D308AF10063B447 /* ChangeLessonDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLessonDateViewModel.swift; sourceTree = "<group>"; };
 		D3A01AF52D05D613008AE4A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D3A01AF62D05D613008AE4A0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D3A01AFB2D05D786008AE4A0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +266,15 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		D392D6492D30824E0063B447 /* CustomComponenets */ = {
+			isa = PBXGroup;
+			children = (
+				D392D64A2D3082710063B447 /* DateTableViewCell.swift */,
+				D392D64B2D3082710063B447 /* DateTableViewCell.xib */,
+			);
+			path = CustomComponenets;
+			sourceTree = "<group>";
+		};
 		D3A01AF02D05D5BD008AE4A0 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +370,7 @@
 				D3DC39D52D133F4A00E98447 /* SignUpResponse.swift */,
 				D31B21622D1EA37600E95862 /* LessonResponse.swift */,
 				D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */,
+				D392D64E2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +440,7 @@
 		D3DB46A72D2B6259004C1DA8 /* ChangeLessonDateView */ = {
 			isa = PBXGroup;
 			children = (
+				D392D6492D30824E0063B447 /* CustomComponenets */,
 				D3DB46A92D2B6273004C1DA8 /* ViewModel */,
 				D3DB46A82D2B626D004C1DA8 /* View */,
 			);
@@ -440,6 +459,7 @@
 		D3DB46A92D2B6273004C1DA8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D392D6502D308AF10063B447 /* ChangeLessonDateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -667,8 +687,8 @@
 		D3FC79762D29AF08000B821E /* WorkAgendaView */ = {
 			isa = PBXGroup;
 			children = (
-				D3DB469A2D2B5063004C1DA8 /* ViewModel */,
 				D36599312D1E9BB20062B09C /* Custom Components */,
+				D3DB469A2D2B5063004C1DA8 /* ViewModel */,
 				D3DC39DF2D134EA300E98447 /* View */,
 			);
 			path = WorkAgendaView;
@@ -798,6 +818,7 @@
 				D3DC39F52D134F4400E98447 /* WorkAgendaViewController.xib in Resources */,
 				D3FC797A2D29B934000B821E /* WorkAgendaDetailsViewController.xib in Resources */,
 				D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */,
+				D392D64D2D3082710063B447 /* DateTableViewCell.xib in Resources */,
 				D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */,
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
 				D3FA96BA2D0119420058C8D1 /* Base in Resources */,
@@ -871,6 +892,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D392D64F2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift in Sources */,
 				D31B21692D25CCB000E95862 /* HelperFunctions.swift in Sources */,
 				D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */,
 				D31B21652D24478C00E95862 /* WorkAgendaViewModel.swift in Sources */,
@@ -907,8 +929,10 @@
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
 				D37F461E2D2CC6FF001E294A /* CustomBannerView.swift in Sources */,
+				D392D64C2D3082710063B447 /* DateTableViewCell.swift in Sources */,
 				D3FC797B2D29B934000B821E /* WorkAgendaDetailsViewController.swift in Sources */,
 				D3C17B2B2D10804D0018BDE5 /* NetworkManagerProtocol.swift in Sources */,
+				D392D6512D308AF10063B447 /* ChangeLessonDateViewModel.swift in Sources */,
 				D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */,
 				D3DB46B62D2B8F95004C1DA8 /* WorkAgendaDetailsViewModel.swift in Sources */,
 				D31C8DF52D060F3C00A8EA1A /* ValidationService.swift in Sources */,
