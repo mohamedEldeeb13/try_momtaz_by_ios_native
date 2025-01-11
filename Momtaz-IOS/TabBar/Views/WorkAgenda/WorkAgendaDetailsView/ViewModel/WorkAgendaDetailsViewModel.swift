@@ -160,6 +160,7 @@ class WorkAgendaDetailsViewModel {
         
         func changeDate(viewController: UIViewController) {
             let controller = ChangeLessonDateViewController.instantiat(name: .xib)
+            controller.sessionID = session.id!
             viewController.navigationController?.pushViewController(controller, animated: true)
         }
         

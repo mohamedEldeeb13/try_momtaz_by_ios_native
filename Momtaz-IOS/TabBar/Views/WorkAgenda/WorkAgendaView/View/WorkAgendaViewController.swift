@@ -50,12 +50,18 @@ class WorkAgendaViewController: UIViewController {
         // Register for the lesson deleted notification
         NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .lessonDeletedSuccessfully, object: nil)
         
+        // Register for the update lesson date notification
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .updateLessonDateSuccessfully, object: nil)
+        
         // Register for the lesson deleted notification
         NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .addReportSuccessfully, object: nil)
     }
     private func removeNotificationObserver(){
         // Register for the lesson deleted notification
         NotificationCenter.default.removeObserver(self, name: .lessonDeletedSuccessfully, object: nil)
+        
+        // Register for the lesson deleted notification
+        NotificationCenter.default.removeObserver(self, name: .updateLessonDateSuccessfully, object: nil)
         
         // Register for the lesson deleted notification
         NotificationCenter.default.removeObserver(self, name: .addReportSuccessfully, object: nil)

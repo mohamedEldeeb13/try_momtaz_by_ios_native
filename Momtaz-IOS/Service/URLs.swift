@@ -45,6 +45,10 @@ class URLs {
         return baseURL + "api/schedule/availabile-slots"
     }
     
+    func getUpdateLessonDateURL() -> String {
+        return baseURL + "api/schedule/update-date"
+    }
+    
     //MARK: reports page
     func addLessonReport() -> String {
         return baseURL + "api/reports/add"

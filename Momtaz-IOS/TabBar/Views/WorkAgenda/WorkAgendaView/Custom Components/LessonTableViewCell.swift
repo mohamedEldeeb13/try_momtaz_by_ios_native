@@ -50,9 +50,10 @@ class LessonTableViewCell: UITableViewCell {
         if isCancelled == "CANCELLED" {
             lessonDateLabel.text = Constants.lesssonCancelled
             lessonCancelledLabel.isHidden = false
-//            lessonDateLabel.textColor = UIColor.red
+            lessonDateLabel.textColor = UIColor.textRed
         }else {
             lessonCancelledLabel.isHidden = true
+            lessonDateLabel.textColor = UIColor.label
         }
         
     }

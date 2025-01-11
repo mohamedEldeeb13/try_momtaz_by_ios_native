@@ -37,18 +37,8 @@ class DateTableViewCell: UITableViewCell {
         dateLabel.text = daySlot.prepareSlotTime()
         if daySlot.booked == true {
             contentView.backgroundColor = UIColor.lightGray
+        } else {
+            contentView.backgroundColor = UIColor.white // Ensure the background resets if the slot is not booked
         }
     }
-
-    
-//    private func prepareIntailUI(isBooked: Bool){
-//        if isBooked == "CANCELLED" {
-//            lessonDateLabel.text = Constants.lesssonCancelled
-//            lessonCancelledLabel.isHidden = false
-////            lessonDateLabel.textColor = UIColor.red
-//        }else {
-//            lessonCancelledLabel.isHidden = true
-//        }
-//        
-//    }
 }

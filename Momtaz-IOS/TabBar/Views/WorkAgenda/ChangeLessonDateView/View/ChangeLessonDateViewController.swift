@@ -23,8 +23,7 @@ class ChangeLessonDateViewController: UIViewController {
     var internetConnectivity: ConnectivityManager?
     var viewModel : ChangeLessonDateProtocol = ChangeLessonDateViewModel()
     var bag = DisposeBag()
-    var isSelectedToBooked: [Int: Bool] = [:]
-    var selectedStartDate: String?
+    var offDays: [String] = []
 
     //MARK: page life cycle
     override func viewDidLoad() {
@@ -95,49 +94,19 @@ class ChangeLessonDateViewController: UIViewController {
     //MARK: date picker function of action
     @objc func datePickerDateChanged(_ sender: UIDatePicker) {
         let selectedDate = sender.date
-        // chack if date valid or not
-        if isDateDisabled(selectedDate) {
-            // change date to nearest valid date
-            sender.setDate(findNextValidDate(from: selectedDate), animated: true)
-            // Show alert or reset to a valid date
-            Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: Constants.invailedSelectedDay , buttonTitle: Constants.ok)
-        } else {
-            // Reset selection state
-            isSelectedToBooked.removeAll()
-            selectedStartDate = nil
-            // Clear previous selection
-            availbleDatesTableView.reloadData()
-            print("Selected date: \(selectedDate)")
+        // Check if the short day name is in the offDays list
+        if isDateValid(selectedDate) {
+            // Show alert that the selected day is invalid
+            Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: Constants.invailedSelectedDay, buttonTitle: Constants.ok)
         }
     }
-    
-    func isDateDisabled(_ date: Date) -> Bool {
-        // get current day
-        let calendar = Calendar.current
-        // get number of current day like 1 or 2 .... from 7
-        let weekday = calendar.component(.weekday, from: date)
-        // 1 = Sunday, 2 = Monday, 3 = tuseday, 4 = wendsday, 5= thursday, 6= friday, 7 = sturday
-        return weekday == 6 || weekday == 4
-    }
-    
-    // to change date to the nearst valide date
-    func findNextValidDate(from selectedDate: Date) -> Date {
-        // take selected date
-        var nextDate = selectedDate
-        // make looping to chack if next date is valid or not valid if valid return date and if not valid add one day to currend day
-        while isDateDisabled(nextDate) {
-            nextDate = Calendar.current.date(byAdding: .day, value: 1, to: nextDate)!
-        }
-        return nextDate
-    }
-    // New method to handle item selection
-    func onDateItemSelected(itemId: Int) {
-        isSelectedToBooked[itemId] = true
-        for key in isSelectedToBooked.keys {
-            if key != itemId {
-                isSelectedToBooked[key] = false
-            }
-        }
+    // Check if a given date's day is off
+    private func isDateValid(_ date: Date) -> Bool {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"  // This will give the full day name (e.g., "Monday", "Tuesday")
+        let selectedDay = formatter.string(from: date)
+        let shortDayName = DateFormatterHelper.convertDayToshortName(dayName: selectedDay)
+        return offDays.contains(shortDayName)
     }
 }
 
@@ -147,9 +116,12 @@ extension ChangeLessonDateViewController {
     private func allBindingFunctions(){
         bindToViewModel()
         subscribeWithChangeLessonDateStates()
+        subscribeWithUpdateLessonDateStates()
         subscribeWithTableView()
         subscribeWithTableViewDidSet()
+        subscribeToOffDays()
     }
+    
     private func bindToViewModel(){
         datePicker.rx.date.map { date -> String in
             let formatter = DateFormatter()
@@ -157,6 +129,7 @@ extension ChangeLessonDateViewController {
             return formatter.string(from: date)
         }.bind(to: viewModel.input.LessonDayBehavorail).disposed(by: bag)
     }
+    
     private func subscribeWithTableView() {
         viewModel.output.lessonDaySlotesPublisher.bind(to: availbleDatesTableView.rx.items(cellIdentifier: String(describing: DateTableViewCell.self), cellType: DateTableViewCell.self)){index, slot, cell in
             cell.setUpCellUI(daySlot: slot)
@@ -168,21 +141,9 @@ extension ChangeLessonDateViewController {
         availbleDatesTableView.rx.modelSelected(AvailabileDaySlot.self).subscribe(onNext: { slot in
             
             if !slot.booked! {
-                
-                if let indexPath = self.availbleDatesTableView.indexPathForSelectedRow,
-                    let cell = self.availbleDatesTableView.cellForRow(at: indexPath) as? DateTableViewCell {
-                    
-                        self.onDateItemSelected(itemId: indexPath.row)
-                        cell.layer.borderColor = UIColor.lightPurple.cgColor
-                        cell.layer.borderWidth = 2.0
-                        cell.layer.cornerRadius = 15
-                        cell.dateLabel.textColor = UIColor.lightPurple
-                    
-                        // Store the startDate
-                        self.selectedStartDate = slot.prepareStartTime()
-                    
-                }
-                
+                self.viewModel.input.sessionIdBehavorail.accept(self.sessionID!)
+                self.viewModel.input.newLessonDateBehavorail.accept(slot.prepareStartTime())
+                self.viewModel.updateessonDateAlert(viewController: self)
             }
                 
         }).disposed(by: bag)
@@ -195,18 +156,15 @@ extension ChangeLessonDateViewController {
             guard let self = self else { return }
             
             switch changeLessonStates {
-            case .showLoading:
+            case .showHud:
                 self.view.isUserInteractionEnabled = false
                 ProgressHUD.animate(Constants.loading)
-            case .hideLoading:
+            case .hideHud:
                 self.view.isUserInteractionEnabled = true
                 ProgressHUD.dismiss()
-            case .success(let AvailabileDaySlot):
-                isSelectedToBooked.removeAll()
-                selectedStartDate = nil
+            case .success:
                 self.noInternetView.isHidden = true
                 self.availbleDatesTableView.isHidden = false
-                self.availbleDatesTableView.reloadData()
             case .failure(let error):
                 if error == Constants.noInternetConnection{
                     self.noInternetView.isHidden = false
@@ -215,5 +173,42 @@ extension ChangeLessonDateViewController {
                 Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: error, buttonTitle: Constants.ok)            }
             
         }).disposed(by: bag)
+    }
+    
+    private func subscribeWithUpdateLessonDateStates() {
+        
+        viewModel.input.updateLessonDateStatesPublisher.subscribe(onNext: {[weak self] updateLessonDateStates in
+            guard let self = self else { return }
+            
+            switch updateLessonDateStates {
+            case .showHud:
+                ProgressHUD.animate(Constants.loading)
+            case .hideHud:
+                ProgressHUD.dismiss()
+            case .success:
+                // pop to the root view
+                self.navigationController?.popToRootViewController(animated: true)
+                Banner.showSuccessBanner(message: Constants.updateLessonDateSuccessfully)
+                // Post a notification to refresh the main agenda
+                NotificationCenter.default.post(name: .updateLessonDateSuccessfully, object: nil)
+            case .failure(let errorMessage):
+                if errorMessage == Constants.noInternetConnection {
+                    Alert.showAlertWithOnlyPositiveButtons(on: self, title: Constants.warning, message: errorMessage, buttonTitle: Constants.ok)
+                }else {
+                    Banner.showErrorBanner(message: Constants.updateLessonDateFailed)
+                }
+            }
+            
+        }).disposed(by: bag)
+}
+
+    
+    
+    private func subscribeToOffDays() {
+        viewModel.output.offDaysPublisher
+            .subscribe(onNext: { [weak self] offDays in
+                guard let self = self else { return }
+                self.offDays = offDays
+            }).disposed(by: bag)
     }
 }

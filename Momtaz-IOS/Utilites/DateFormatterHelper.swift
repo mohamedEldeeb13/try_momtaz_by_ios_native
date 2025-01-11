@@ -79,15 +79,42 @@ class DateFormatterHelper {
             return "Invalid date"
         }
         
-        let isoFormatter = ISO8601DateFormatter()
+        // Initialize a custom DateFormatter to parse the input string format (ISO 8601 with microseconds)
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'" // The exact input format
+        
+        // Initialize the output formatter to match your desired format
         let outputFormatter = DateFormatter()
         outputFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         outputFormatter.locale = Locale(identifier: "en_US")
         
-        if let date = isoFormatter.date(from: dateString) {
+        if let date = inputFormatter.date(from: dateString) {
             return outputFormatter.string(from: date)
         } else {
             return "Invalid date format"
+        }
+    }
+    
+    //MARK: convert day from string to complete name
+    
+    static func convertDayToshortName(dayName: String) -> String {
+        switch dayName.lowercased() {
+        case "saturday":
+            return "sat"
+        case "sunday":
+            return "sun"
+        case "monday":
+            return "mon"
+        case "tuesday":
+            return "tue"
+        case "wednesday":
+            return "wed"
+        case "thursday":
+            return "tue"
+        case "friday":
+            return "fri"
+        default:
+            return ""
         }
     }
 }

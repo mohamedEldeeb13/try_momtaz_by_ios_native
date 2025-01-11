@@ -70,6 +70,10 @@ class Constants{
     static let notDurationAvailable = "No duration available"
     static let monthly = "Monthly"
     static let oneClass = "Individual class"
+    static let updateDate = "Update Date"
+    static let warningMessageFromUpdateLessonDate = "You will update student lesson date, are you sure?"
+    static let updateLessonDateSuccessfully = "Lesson date updated successfully"
+    static let updateLessonDateFailed = "Error while updating Lesson date"
     
     //MARK: Review page
     static let showReviewHeadText = "Review Informations"

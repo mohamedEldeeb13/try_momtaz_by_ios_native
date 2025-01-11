@@ -57,7 +57,9 @@ struct AvailabileDaySlot: Codable {
     }
     
     func prepareStartTime()-> String{
-        return DateFormatterHelper.formatStringToDateAndTimeString(self.startDate ?? "")
+        let mm =  DateFormatterHelper.formatStringToDateAndTimeString(self.startDate ?? "")
+        print(mm)
+        return mm
     }
 }
 
