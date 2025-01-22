@@ -122,8 +122,7 @@ class WorkAgendaDetailsViewModel {
             if let phoneNumber = session.booking?.parent?.phone {
                 HelperFunctions.openCallingApp(with: phoneNumber, on: viewController)
             }else{
-                
-                Alert.showAlertWithOnlyPositiveButtons(on: viewController, title: Constants.warning, message: "Not have phone number to call parent", buttonTitle: Constants.ok)
+                Alert.showAlertWithOnlyPositiveButtons(on: viewController, title: Constants.warning, message: Constants.noHavePhoneNumber, buttonTitle: Constants.ok)
             }
         }
         

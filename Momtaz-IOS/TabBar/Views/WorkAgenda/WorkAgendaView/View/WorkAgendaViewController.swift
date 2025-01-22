@@ -170,10 +170,10 @@ extension WorkAgendaViewController {
         viewModel.input.workAgendaStatePublisher.subscribe(onNext:{ [weak self] workAgendaState in
             guard let self = self else{return}
             switch workAgendaState {
-            case .showLoading:
+            case .showHud:
                 self.view.isUserInteractionEnabled = false
                 ProgressHUD.animate(Constants.loading)
-            case .hideLoading:
+            case .hideHud:
                 self.view.isUserInteractionEnabled = true
                 ProgressHUD.dismiss()
             case .success(let sessions):

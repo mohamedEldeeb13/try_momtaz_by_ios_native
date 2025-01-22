@@ -18,8 +18,8 @@ protocol WorkAgendaViewModelProtocol : AnyObject {
 
 //MARK: workAgenda States
 enum WorkAgendaStates {
-    case showLoading
-    case hideLoading
+    case showHud
+    case hideHud
     case success([LessonSessions])
     case failure(String)
 }
@@ -65,12 +65,12 @@ class WorkAgendaViewModel : WorkAgendaViewModelProtocol , ViewModel {
             self.input.workAgendaStatePublisher.onNext(.failure(Constants.noInternetConnection))
             return
         }
-        self.input.workAgendaStatePublisher.onNext(.showLoading)
+        self.input.workAgendaStatePublisher.onNext(.showHud)
         
         let loginURL = URLs.shared.getLessonsDayURL(day: input.workAgendaDayBehavior.value)
         
         NetworkManager.shared.getData(url: loginURL){ [weak self] (response: LessonResponse?, error: String?) in
-            self?.input.workAgendaStatePublisher.onNext(.hideLoading)
+            self?.input.workAgendaStatePublisher.onNext(.hideHud)
             guard let self = self else{return}
             if let error = error { input.workAgendaStatePublisher.onNext(.failure(error))
                 return

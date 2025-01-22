@@ -17,7 +17,7 @@ class LessonTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.layer.borderColor = UIColor.lightGray.cgColor
+        contentView.layer.borderColor = UIColor.lightBorder.cgColor
         contentView.layer.borderWidth = 1
         contentView.layer.cornerRadius = 20
         contentView.layer.masksToBounds = true

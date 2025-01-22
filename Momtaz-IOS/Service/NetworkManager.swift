@@ -61,8 +61,8 @@ class NetworkManager: NetworkManagerProtocol {
                 do {
                     // Log the raw JSON data to inspect the response format
                         if let jsonString = String(data: data, encoding: .utf8) {
-                                       print("Raw Response: \(jsonString)")
-                                   }
+                            print("Raw Response: \(jsonString)")
+                        }
                     let result = try JSONDecoder().decode(T.self, from: data)
                     handler(result,response.response?.statusCode)
                 } catch {

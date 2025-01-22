@@ -53,4 +53,12 @@ class URLs {
     func addLessonReport() -> String {
         return baseURL + "api/reports/add"
     }
+    
+    //MARK: Reservation page
+    func getTeacherBookings() -> String {
+        return baseURL + "api/bookings/list"
+    }
+    func getCancelTeacherBookingUrl(bookingId: String) -> String {
+        return baseURL + "api/bookings/cancel/\(bookingId)"
+    }
 }

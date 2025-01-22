@@ -11,4 +11,5 @@ extension Notification.Name {
     static let lessonDeletedSuccessfully = Notification.Name("lessonDeletedSuccessfully")
     static let updateLessonDateSuccessfully = Notification.Name("UpdateLessonDateSuccessfully")
     static let addReportSuccessfully = Notification.Name("addReportSuccessfully")
+    static let bookingDeleteSuccessfully = Notification.Name("bookingDeleteSuccessfully")
 }

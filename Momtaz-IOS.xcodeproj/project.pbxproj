@@ -18,6 +18,10 @@
 		D31C8DF92D06128C00A8EA1A /* RegularExcepression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */; };
 		D31C8DFB2D061A7800A8EA1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */; };
 		D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */; };
+		D32C2AFB2D416838004B6022 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C2AF92D416838004B6022 /* ReservationDetailsViewController.swift */; };
+		D32C2AFC2D416838004B6022 /* ReservationDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32C2AFA2D416838004B6022 /* ReservationDetailsViewController.xib */; };
+		D32C2AFE2D4171DD004B6022 /* ReservationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C2AFD2D4171DD004B6022 /* ReservationDetailsViewModel.swift */; };
+		D32C2B002D4197ED004B6022 /* DeleteBookingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C2AFF2D4197ED004B6022 /* DeleteBookingResponse.swift */; };
 		D342E33A2D2EB6740025EDFE /* StudentDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E3392D2EB6740025EDFE /* StudentDetailsView.swift */; };
 		D342E33C2D2EB6850025EDFE /* StudentDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */; };
 		D342E33E2D2F62770025EDFE /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */; };
@@ -39,7 +43,14 @@
 		D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */; };
 		D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */; };
 		D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */; };
+		D3A45DBA2D3FA7A500168C38 /* ClassBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A45DB82D3FA7A500168C38 /* ClassBillViewController.swift */; };
+		D3A45DBB2D3FA7A500168C38 /* ClassBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A45DB92D3FA7A500168C38 /* ClassBillViewController.xib */; };
+		D3A45DBD2D3FCBB300168C38 /* reservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A45DBC2D3FCBB300168C38 /* reservationViewModel.swift */; };
 		D3A5DF432D31F8490080E807 /* UpdateLessonDateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5DF422D31F8490080E807 /* UpdateLessonDateResponse.swift */; };
+		D3AA2E962D3F2C7100641025 /* TeacherBookingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA2E952D3F2C7100641025 /* TeacherBookingsResponse.swift */; };
+		D3AA2E9B2D3F455100641025 /* notHavebookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA2E9A2D3F455100641025 /* notHavebookings.swift */; };
+		D3AA2E9E2D3F63BB00641025 /* teacherBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AA2E9D2D3F63BB00641025 /* teacherBookingTableViewCell.xib */; };
+		D3AA2E9F2D3F63BB00641025 /* teacherBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA2E9C2D3F63BB00641025 /* teacherBookingTableViewCell.swift */; };
 		D3C17B2B2D10804D0018BDE5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2A2D10804D0018BDE5 /* NetworkManagerProtocol.swift */; };
 		D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2C2D10805A0018BDE5 /* NetworkManager.swift */; };
 		D3C17B2F2D10806C0018BDE5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C17B2E2D10806C0018BDE5 /* URLs.swift */; };
@@ -114,6 +125,10 @@
 		D31C8DF82D06128C00A8EA1A /* RegularExcepression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExcepression.swift; sourceTree = "<group>"; };
 		D31C8DFA2D061A7800A8EA1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D31C8DFC2D061B4C00A8EA1A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D32C2AF92D416838004B6022 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
+		D32C2AFA2D416838004B6022 /* ReservationDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationDetailsViewController.xib; sourceTree = "<group>"; };
+		D32C2AFD2D4171DD004B6022 /* ReservationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewModel.swift; sourceTree = "<group>"; };
+		D32C2AFF2D4197ED004B6022 /* DeleteBookingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBookingResponse.swift; sourceTree = "<group>"; };
 		D342E3392D2EB6740025EDFE /* StudentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsView.swift; sourceTree = "<group>"; };
 		D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentDetailsView.xib; sourceTree = "<group>"; };
 		D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
@@ -135,7 +150,14 @@
 		D3A01AFC2D05D786008AE4A0 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		D3A01B012D05D891008AE4A0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		D3A01B022D05D891008AE4A0 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		D3A45DB82D3FA7A500168C38 /* ClassBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassBillViewController.swift; sourceTree = "<group>"; };
+		D3A45DB92D3FA7A500168C38 /* ClassBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassBillViewController.xib; sourceTree = "<group>"; };
+		D3A45DBC2D3FCBB300168C38 /* reservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reservationViewModel.swift; sourceTree = "<group>"; };
 		D3A5DF422D31F8490080E807 /* UpdateLessonDateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLessonDateResponse.swift; sourceTree = "<group>"; };
+		D3AA2E952D3F2C7100641025 /* TeacherBookingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherBookingsResponse.swift; sourceTree = "<group>"; };
+		D3AA2E9A2D3F455100641025 /* notHavebookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notHavebookings.swift; sourceTree = "<group>"; };
+		D3AA2E9C2D3F63BB00641025 /* teacherBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teacherBookingTableViewCell.swift; sourceTree = "<group>"; };
+		D3AA2E9D2D3F63BB00641025 /* teacherBookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teacherBookingTableViewCell.xib; sourceTree = "<group>"; };
 		D3C17B2A2D10804D0018BDE5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		D3C17B2C2D10805A0018BDE5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D3C17B2E2D10806C0018BDE5 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -226,6 +248,15 @@
 				9147FD68114BE36E11ECE4DB /* Pods_Momtaz_IOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D32C2AF82D41680F004B6022 /* Reservation details view */ = {
+			isa = PBXGroup;
+			children = (
+				D32C2AF92D416838004B6022 /* ReservationDetailsViewController.swift */,
+				D32C2AFA2D416838004B6022 /* ReservationDetailsViewController.xib */,
+			);
+			path = "Reservation details view";
 			sourceTree = "<group>";
 		};
 		D342E3362D2EB33A0025EDFE /* CustomComponents */ = {
@@ -354,6 +385,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D3A45DB72D3FA78200168C38 /* Class Bill View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A45DB82D3FA7A500168C38 /* ClassBillViewController.swift */,
+				D3A45DB92D3FA7A500168C38 /* ClassBillViewController.xib */,
+			);
+			path = "Class Bill View";
+			sourceTree = "<group>";
+		};
+		D3AA2E992D3F452700641025 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA2E9A2D3F455100641025 /* notHavebookings.swift */,
+				D3AA2E9C2D3F63BB00641025 /* teacherBookingTableViewCell.swift */,
+				D3AA2E9D2D3F63BB00641025 /* teacherBookingTableViewCell.xib */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
 		D3C17B282D107FAC0018BDE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +424,8 @@
 				D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */,
 				D392D64E2D3086200063B447 /* AvailabileLessonTimePerDayResponse.swift */,
 				D3A5DF422D31F8490080E807 /* UpdateLessonDateResponse.swift */,
+				D3AA2E952D3F2C7100641025 /* TeacherBookingsResponse.swift */,
+				D32C2AFF2D4197ED004B6022 /* DeleteBookingResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +560,7 @@
 		D3DC39DC2D134E6900E98447 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				D3AA2E992D3F452700641025 /* Custom Components */,
 				D3DC39E22D134ED500E98447 /* ViewModel */,
 				D3DC39E12D134ED000E98447 /* View */,
 			);
@@ -544,6 +597,8 @@
 		D3DC39E12D134ED000E98447 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D32C2AF82D41680F004B6022 /* Reservation details view */,
+				D3A45DB72D3FA78200168C38 /* Class Bill View */,
 				D3DC39EF2D134F3600E98447 /* ReservationsViewController.swift */,
 				D3DC39F02D134F3600E98447 /* ReservationsViewController.xib */,
 			);
@@ -553,6 +608,8 @@
 		D3DC39E22D134ED500E98447 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D3A45DBC2D3FCBB300168C38 /* reservationViewModel.swift */,
+				D32C2AFD2D4171DD004B6022 /* ReservationDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -820,12 +877,15 @@
 				D3DB46A62D2B5BD8004C1DA8 /* AddReviewViewController.xib in Resources */,
 				D3DC39F52D134F4400E98447 /* WorkAgendaViewController.xib in Resources */,
 				D3FC797A2D29B934000B821E /* WorkAgendaDetailsViewController.xib in Resources */,
+				D3AA2E9E2D3F63BB00641025 /* teacherBookingTableViewCell.xib in Resources */,
 				D3A01B042D05D891008AE4A0 /* ForgetPasswordViewController.xib in Resources */,
 				D392D64D2D3082710063B447 /* DateTableViewCell.xib in Resources */,
 				D3A01AF82D05D613008AE4A0 /* LoginViewController.xib in Resources */,
 				D3FA96B72D0119420058C8D1 /* Assets.xcassets in Resources */,
+				D3A45DBB2D3FA7A500168C38 /* ClassBillViewController.xib in Resources */,
 				D3FA96BA2D0119420058C8D1 /* Base in Resources */,
 				D3A01AFE2D05D786008AE4A0 /* SignUpViewController.xib in Resources */,
+				D32C2AFC2D416838004B6022 /* ReservationDetailsViewController.xib in Resources */,
 				D3FA96EB2D0122AD0058C8D1 /* RoundedTextField.xib in Resources */,
 				D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */,
 				D342E33C2D2EB6850025EDFE /* StudentDetailsView.xib in Resources */,
@@ -900,7 +960,9 @@
 				D3DC39D62D133F4A00E98447 /* SignUpResponse.swift in Sources */,
 				D31B21652D24478C00E95862 /* WorkAgendaViewModel.swift in Sources */,
 				D3DB469F2D2B519F004C1DA8 /* ShowReviewViewController.swift in Sources */,
+				D32C2AFE2D4171DD004B6022 /* ReservationDetailsViewModel.swift in Sources */,
 				D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */,
+				D3AA2E9F2D3F63BB00641025 /* teacherBookingTableViewCell.swift in Sources */,
 				D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */,
 				D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */,
 				D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */,
@@ -912,10 +974,13 @@
 				D3A01AF72D05D613008AE4A0 /* LoginViewController.swift in Sources */,
 				D30FD6CF2D04AFBF00F7AAC7 /* AuthNavigationController.swift in Sources */,
 				D31B21672D25C4A200E95862 /* DateFormatterHelper.swift in Sources */,
+				D32C2B002D4197ED004B6022 /* DeleteBookingResponse.swift in Sources */,
+				D3AA2E9B2D3F455100641025 /* notHavebookings.swift in Sources */,
 				D3DB46A52D2B5BD8004C1DA8 /* AddReviewViewController.swift in Sources */,
 				D36E516A2D145FFF007BECC7 /* MainNavigationController.swift in Sources */,
 				D37F46212D2CE20E001E294A /* NotificationCenterExtentions.swift in Sources */,
 				D36E516C2D1481B1007BECC7 /* CustomBadgeButtonView.swift in Sources */,
+				D3AA2E962D3F2C7100641025 /* TeacherBookingsResponse.swift in Sources */,
 				D3D1A1652D260573003B16E5 /* ConnectivityManager.swift in Sources */,
 				D31C8DFD2D061B4C00A8EA1A /* SignUpViewModel.swift in Sources */,
 				D3DB46AC2D2B628D004C1DA8 /* ChangeLessonDateViewController.swift in Sources */,
@@ -924,12 +989,15 @@
 				D3DB46B32D2B85B9004C1DA8 /* buttonExtentions.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
 				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,
+				D32C2AFB2D416838004B6022 /* ReservationDetailsViewController.swift in Sources */,
 				D3D1A1692D262383003B16E5 /* NoInternetView.swift in Sources */,
 				D342E33A2D2EB6740025EDFE /* StudentDetailsView.swift in Sources */,
 				D38262AF2D041F980086CB1E /* Alert.swift in Sources */,
 				D3A01AFD2D05D786008AE4A0 /* SignUpViewController.swift in Sources */,
+				D3A45DBA2D3FA7A500168C38 /* ClassBillViewController.swift in Sources */,
 				D31B21632D1EA37600E95862 /* LessonResponse.swift in Sources */,
 				D3FA96AB2D0119400058C8D1 /* AppDelegate.swift in Sources */,
+				D3A45DBD2D3FCBB300168C38 /* reservationViewModel.swift in Sources */,
 				D3FA96AD2D0119400058C8D1 /* SceneDelegate.swift in Sources */,
 				D37F461E2D2CC6FF001E294A /* CustomBannerView.swift in Sources */,
 				D392D64C2D3082710063B447 /* DateTableViewCell.swift in Sources */,

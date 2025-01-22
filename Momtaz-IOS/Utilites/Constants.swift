@@ -54,6 +54,7 @@ class Constants{
     static let level = "Level"
     static let subject = "Subject"
     static let hour = "Hour"
+    static let minute = "Minute"
     static let day = "Day"
     static let parent = "Parent"
     static let price = "Price"
@@ -74,6 +75,7 @@ class Constants{
     static let warningMessageFromUpdateLessonDate = "You will update student lesson date, are you sure?"
     static let updateLessonDateSuccessfully = "Lesson date updated successfully"
     static let updateLessonDateFailed = "Error while updating Lesson date"
+    static let noHavePhoneNumber = "Not have phone number to call parent"
     
     //MARK: Review page
     static let showReviewHeadText = "Review Informations"
@@ -98,5 +100,32 @@ class Constants{
     static let failedToAddStudentReport = "error while add student report"
     static let addStudentReportSuccessfully = "student report added successfully"
     
+    
+    //MARK: Reservation page
+    static let reservationHeadText = "Reservation"
+    static let reservationSubHeadText = "You can know and control your reservations completely."
+    static let onProgress = "On Progress"
+    static let cancelled = "Cancelled"
+    static let finished = "Finished"
+    static let notHaveProgressBookingHead = "You don't have any progress bookings scheduled at the moment. Please set up sessions to track student growth and provide timely feedback"
+    static let notHaveCancelledBooking = "You don't have any canceled bookings at the moment. Please check your schedule for any changes or cancellations."
+    static let notHaveFinishedBooking = "You don't have any finished bookings at the moment. Please complete your sessions to ensure progress is tracked and feedback is provided."
+    static let classHistory = "Class History"
+    static let classHistoryPerWeek = "Classes History (per week)"
+    static let classDuration = "Class Duration"
+    static let eductionalLevel = "Eductional Level"
+    static let studentLocation = "Student Location"
+    static let showBill = "Show Bill"
+    static let deletebooking = "Delete Booking"
+    static let currency = "SAR"
+    static let billInformations = "Bill Informations"
+    static let classPrice = "Class Price"
+    static let oneClasses = "class"
+    static let classes = "classes"
+    static let total = "Total"
+    static let classPerWeek = "Class per week"
+    static let warningMessageToDeleteBooking = "You will delete Booking, are you sure?"
+    static let bookingDeleteSuccessfully = "Booking Deleted Successfully"
+    static let failedDeleteBooking = "Error while Deleting Booking"
     
 }

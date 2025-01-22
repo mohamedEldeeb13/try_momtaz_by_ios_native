@@ -60,7 +60,7 @@ struct LessonSessions : Codable {
         guard let number = self.booking?.packageDetails?.sessionTime else {
             return Constants.notDurationAvailable
         }
-        let durationType = (self.booking?.packageDetails?.sessionTimeUnit == "HOUR") ? "Hour" : "Minute"
+        let durationType = (self.booking?.packageDetails?.sessionTimeUnit == "HOUR") ? Constants.hour : Constants.minute
         return "\(number) \(durationType)"
     }
     
@@ -107,7 +107,7 @@ struct LessonBooking : Codable {
     let students: [Student]?
     let subject: Subject?
     
-    // prepare lesson day
+    // prepare package type
     func preparePackageType() -> String{
         let packageType = self.pkgType == "MONTHLY" ? Constants.monthly : Constants.oneClass
         return packageType
@@ -365,35 +365,6 @@ struct Government : Codable {
 // MARK: - Name
 struct GovernmentName : Codable {
     let ar: String?
-}
-
-// MARK: - PriceDetails
-struct PriceDetails : Codable {
-    let extra: [Extra]?
-}
-
-// MARK: - Extra
-struct Extra : Codable {
-    let extraID: Int?
-    let type, name: String?
-    let price: Price?
-    let valType: String?
-    let val, priceAfter: Price?
-    let langs: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case extraID = "extra_id"
-        case type, name, price
-        case valType = "val_type"
-        case val
-        case priceAfter = "price_after"
-        case langs
-    }
-}
-
-enum Price : Codable {
-    case integer(Int)
-    case string(String)
 }
 
 // MARK: - Slot
