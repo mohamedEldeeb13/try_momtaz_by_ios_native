@@ -59,6 +59,7 @@ class Constants{
     static let parent = "Parent"
     static let price = "Price"
     static let callParent = "Call Parent"
+    static let call = "Call"
     static let messageParent = "Message Parent"
     static let addReview = "Add Review"
     static let showReview = "Show Review"
@@ -76,6 +77,21 @@ class Constants{
     static let updateLessonDateSuccessfully = "Lesson date updated successfully"
     static let updateLessonDateFailed = "Error while updating Lesson date"
     static let noHavePhoneNumber = "Not have phone number to call parent"
+    static let primarySchool = "Primary school"
+    static let secondarySchool = "Secondary school"
+    static let highSchool = "High school"
+    static let firstPrimarySchool = "First year of primary school"
+    static let secondaryPrimarySchool = "Second year of primary school"
+    static let thirdPrimarySchool = "Third year of primary school"
+    static let fourthPrimarySchool = "Fourth year of primary school"
+    static let fifthPrimarySchool = "Fifth year of primary school"
+    static let sixthPrimarySchool = "Sixth year of primary school"
+    static let firstSecondarySchool = "First year of Secondary school"
+    static let secondSecondarySchool = "Second year of Secondary school"
+    static let thirdSecondarySchool = "Third year of Secondary school"
+    static let firstHighSchool = "First year of high school"
+    static let secondaryHighSchool = "Second year of high school"
+    static let thirdHighSchool = "Third year of high school"
     
     //MARK: Review page
     static let showReviewHeadText = "Review Informations"
@@ -127,5 +143,18 @@ class Constants{
     static let warningMessageToDeleteBooking = "You will delete Booking, are you sure?"
     static let bookingDeleteSuccessfully = "Booking Deleted Successfully"
     static let failedDeleteBooking = "Error while Deleting Booking"
+    
+    //MARK: students page
+    static let StudentsPageSubHeadText = "Manage your students completely, including reports, exams, appointments, and more"
+    static let yourStudents = "Your Students"
+    static let student = "Student"
+    static let totalStudentsNumber = "Total number of students"
+    static let newStudents = "New Students"
+    static let newStudentsInThisMonth = "New students in this month"
+    static let eductionalStage = "Eductional Stage"
+    static let classRoom = "Classroom"
+    static let notHaveStudents = "There are no students"
+    
+    
     
 }

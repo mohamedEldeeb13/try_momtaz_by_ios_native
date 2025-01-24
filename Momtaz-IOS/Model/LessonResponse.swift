@@ -399,13 +399,19 @@ struct Student : Codable {
     let levelID, clsroom: Int?
     let pivot: LessonPivot?
     let level: Level?
+    let parent: Parent?
     
     func getFormattedStudentLevel() -> String {
         let levelName = self.level?.name?.en ?? self.level?.name?.ar ?? "-"
         let classroomNumber = String(self.clsroom ?? 0)
-        return HelperFunctions.getStudentLevel(levelName: levelName, classRoomNumber: classroomNumber)
+        return HelperFunctions.getStudentEducationalLevel(levelName: levelName, classRoomNumber: classroomNumber)
     }
-    
+
+    func getFormattedStudentEstage() -> String {
+        let levelName = self.level?.name?.en ?? self.level?.name?.ar ?? "-"
+        return HelperFunctions.getStudentEducationaStage(levelName: levelName)
+    }
+
     enum CodingKeys: String, CodingKey {
         case id
         case createdAt = "created_at"
@@ -413,7 +419,7 @@ struct Student : Codable {
         case parentID = "parent_id"
         case name, avatar
         case levelID = "level_id"
-        case clsroom, pivot, level
+        case clsroom, pivot, level, parent
     }
 }
 

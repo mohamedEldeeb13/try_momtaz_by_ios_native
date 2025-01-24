@@ -9,46 +9,55 @@ import Foundation
 import UIKit
 
 class HelperFunctions {
-    static func getStudentLevel(levelName: String, classRoomNumber: String) -> String {
+    static func getStudentEducationalLevel(levelName: String, classRoomNumber: String) -> String {
         if levelName == "المرحلة الابتدائيه" || levelName == "Primary" {
             switch classRoomNumber {
             case "1":
-                return "First year of primary school"
+                return Constants.firstPrimarySchool
             case "2":
-                return "Second year of primary school"
+                return Constants.secondaryPrimarySchool
             case "3":
-                return "Third year of primary school"
+                return Constants.thirdPrimarySchool
             case "4":
-                return "fourth year of primary school"
+                return Constants.fourthPrimarySchool
             case "5":
-                return "fifth year of primary school"
+                return Constants.fifthPrimarySchool
             case "6":
-                return "Sixth year of primary school"
+                return Constants.sixthPrimarySchool
             default:
                 return "-"
             }
         } else if levelName == "المرحلة الاعدادية" || levelName == "Secondary" {
             switch classRoomNumber {
             case "1":
-                return "First year of Secondary school"
+                return Constants.firstSecondarySchool
             case "2":
-                return "Second year of Secondary school"
+                return Constants.secondSecondarySchool
             case "3":
-                return "Third year of Secondary school"
+                return Constants.thirdSecondarySchool
             default:
                 return "-"
             }
         } else {
             switch classRoomNumber {
             case "1":
-                return "First year of high school"
+                return Constants.firstHighSchool
             case "2":
-                return "Second year of high school"
+                return Constants.secondaryHighSchool
             case "3":
-                return "Third year of high school"
+                return Constants.thirdHighSchool
             default:
                 return "-"
             }
+        }
+    }
+    static func getStudentEducationaStage(levelName: String) -> String {
+        if levelName == "المرحلة الابتدائيه" || levelName == "Primary" {
+            return Constants.primarySchool
+        } else if levelName == "المرحلة الاعدادية" || levelName == "Secondary" {
+            return Constants.secondarySchool
+        } else {
+            return Constants.highSchool
         }
     }
     

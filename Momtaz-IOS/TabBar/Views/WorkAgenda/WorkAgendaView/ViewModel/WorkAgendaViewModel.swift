@@ -13,6 +13,7 @@ import RxCocoa
 protocol WorkAgendaViewModelProtocol : AnyObject {
     var input : WorkAgendaViewModel.Input {get}
     var output : WorkAgendaViewModel.Output {get}
+    func fetchLessonssFromApi()
     
 }
 
@@ -59,7 +60,7 @@ class WorkAgendaViewModel : WorkAgendaViewModelProtocol , ViewModel {
     }
     
     //MARK: fetch lesson function
-    private func fetchLessonssFromApi() {
+    func fetchLessonssFromApi() {
         // Check for internet connectivity
         guard ConnectivityManager.connectivityInstance.isConnectedToInternet() else {
             self.input.workAgendaStatePublisher.onNext(.failure(Constants.noInternetConnection))

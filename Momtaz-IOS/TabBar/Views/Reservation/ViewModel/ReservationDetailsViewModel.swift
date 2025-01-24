@@ -44,7 +44,7 @@ class ReservationDetailsViewModel {
         NetworkManager.shared.getData(url: cancelBookingUrl){ [weak self] (response: DeleteBookingResponse?, error: String?) in
             self?.bindDeleteBookingResultToViewController?(.hideHud)
             guard let self = self else{return}
-            if let error = error {
+            if error != nil {
                 bindDeleteBookingResultToViewController?(.failure(Constants.failedDeleteBooking))
                 return
             }

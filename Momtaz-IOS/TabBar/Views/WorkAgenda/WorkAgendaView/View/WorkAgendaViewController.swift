@@ -140,6 +140,7 @@ extension WorkAgendaViewController {
         subscribeWithWorkAgendaStates()
         subscribeWithTableView()
         subscribeWithTableViewDidSet()
+        viewModel.fetchLessonssFromApi()
         
     }
     
