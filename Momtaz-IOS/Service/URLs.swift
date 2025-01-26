@@ -66,4 +66,9 @@ class URLs {
     func getTeacherStudents() -> String {
         return baseURL + "api/teacher/students"
     }
+    
+    //MARK: reports page
+    func getReports() -> String {
+        return baseURL + "api/reports/list"
+    }
 }

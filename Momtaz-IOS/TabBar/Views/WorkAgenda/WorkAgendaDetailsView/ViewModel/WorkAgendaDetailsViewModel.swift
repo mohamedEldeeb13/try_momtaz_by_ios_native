@@ -141,7 +141,11 @@ class WorkAgendaDetailsViewModel {
         func addOrShowReview(viewController: UIViewController) {
             if session.isReported ?? false {
                 let controller = ShowReviewViewController.instantiat(name: .xib)
-                controller.studentReport = session.report
+                controller.knowldgeSubjectValue = String(session.report?.scientificScore ?? 0)
+                controller.studentAbilityValue = String(session.report?.absorbScore ?? 0)
+                controller.studentCommitmentValue = String(session.report?.commitmentScore ?? 0)
+                controller.overAllValue = String(session.report?.globalScore ?? 0)
+                controller.noteValue = session.report?.note ?? "-"
                 controller.modalPresentationStyle = .pageSheet
                 if #available(iOS 15.0, *) {
                     if let sheet = controller.sheetPresentationController {
@@ -152,6 +156,7 @@ class WorkAgendaDetailsViewModel {
                 viewController.present(controller, animated: true, completion: nil)
             } else {
                 let controller = AddReviewViewController.instantiat(name: .xib)
+                controller.fromReportedPage = false
                 controller.LessonSession = session
                 viewController.navigationController?.pushViewController(controller, animated: true)
             }

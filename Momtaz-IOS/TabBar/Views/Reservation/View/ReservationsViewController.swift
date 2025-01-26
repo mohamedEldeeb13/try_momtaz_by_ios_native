@@ -136,6 +136,14 @@ extension ReservationsViewController {
         internetConnectivity = ConnectivityManager.connectivityInstance
         if internetConnectivity?.isConnectedToInternet() == true {
             noInternetView.isHidden = true
+            viewModel.output.teacherBookingsPublisher
+                .observe(on: MainScheduler.instance) // ensure UI updates on main thread
+                .subscribe(onNext: { [weak self] bookings in
+                    // Update your UI here with the sessions data
+                    self?.notHaveBookingView.isHidden = !bookings.isEmpty
+                    self?.bookingTableView.isHidden = bookings.isEmpty
+                }).disposed(by: bag)
+
             notHaveBookingView.isHidden = false
             bookingTableView.isHidden = false
         }else {

@@ -106,6 +106,7 @@ struct LessonBooking : Codable {
     let student: Student?
     let students: [Student]?
     let subject: Subject?
+
     
     // prepare package type
     func preparePackageType() -> String{
@@ -153,18 +154,18 @@ struct LessonReport : Codable {
     let note: String?
 
     enum CodingKeys: String, CodingKey {
-                case id
-                case createdAt = "created_at"
-                case updatedAt = "updated_at"
-                case teacherID = "teacher_id"
-                case parentID = "parent_id"
-                case studentID = "student_id"
-                case sessionID = "session_id"
-                case scientificScore = "scientific_score"
-                case absorbScore = "absorb_score"
-                case commitmentScore = "commitment_score"
-                case globalScore = "global_score"
-                case note
+        case id
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+        case teacherID = "teacher_id"
+        case parentID = "parent_id"
+        case studentID = "student_id"
+        case sessionID = "session_id"
+        case scientificScore = "scientific_score"
+        case absorbScore = "absorb_score"
+        case commitmentScore = "commitment_score"
+        case globalScore = "global_score"
+        case note
     }
 }
 

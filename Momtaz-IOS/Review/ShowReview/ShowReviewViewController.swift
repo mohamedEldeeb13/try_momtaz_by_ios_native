@@ -26,13 +26,17 @@ class ShowReviewViewController: UIViewController {
     @IBOutlet weak var noteLabel: UILabel!
     
     //MARK: varaible that will passed
-    var studentReport: LessonReport!
+    var knowldgeSubjectValue: String!
+    var studentAbilityValue: String!
+    var studentCommitmentValue: String!
+    var overAllValue: String!
+    var noteValue: String!
     
     //MARK: page life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpIntailUI()
-       setupIntailData(report: studentReport)
+       setupIntailData()
     }
     
     private func setUpIntailUI(){
@@ -45,12 +49,12 @@ class ShowReviewViewController: UIViewController {
     }
 
 
-    private func setupIntailData(report: LessonReport){
-        knowledgeOfSubjectLabel.text = String(report.scientificScore ?? 0)
-        comprehensionAbilityLabel.text = String(report.absorbScore ?? 0)
-        studentCommitmentLabel.text = String(report.commitmentScore ?? 0)
-        ovelallLabel.text = String(report.globalScore ?? 0)
-        noteLabel.text = report.note ?? "-"
+    private func setupIntailData(){
+        knowledgeOfSubjectLabel.text = knowldgeSubjectValue
+        comprehensionAbilityLabel.text = studentAbilityValue
+        studentCommitmentLabel.text = studentCommitmentValue
+        ovelallLabel.text = overAllValue
+        noteLabel.text = noteValue
         
     }
 }

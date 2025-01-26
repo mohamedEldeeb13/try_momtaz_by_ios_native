@@ -28,7 +28,7 @@ class StudentTableViewCell: UITableViewCell {
         // Initialization code
         contentView.layer.borderColor = UIColor.lightBorder.cgColor
         contentView.layer.borderWidth = 1
-        contentView.layer.cornerRadius = 15
+        contentView.layer.cornerRadius = 20
         contentView.clipsToBounds = true
         selectionStyle = .none
         prepareIntailUI()
@@ -69,7 +69,7 @@ class StudentTableViewCell: UITableViewCell {
         
     }
     private func setUpIntailImageUI(){
-        studentImage.changeImageViewStyle(borderColor: .lightBorder , cornerRadius: 10)
+        studentImage.changeImageViewStyle(cornerRadius: 10)
         
     }
     private func setUpIntailbuttonsUI(){

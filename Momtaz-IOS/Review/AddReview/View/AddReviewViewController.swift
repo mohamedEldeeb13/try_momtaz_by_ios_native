@@ -24,14 +24,17 @@ class AddReviewViewController: UIViewController {
     @IBOutlet weak var overAlltextLbl: UILabel!
     @IBOutlet weak var generalAssessmentTextLbl: UILabel!
     @IBOutlet weak var noteTextLbl: UILabel!
-    
+    @IBOutlet var notGoodCollectionlbls: [UILabel]!
+    @IBOutlet var goodTextCollectionLbls: [UILabel]!
     @IBOutlet weak var studentDetails: StudentDetailsView!
     @IBOutlet var elevationButtons: [UIButton]!
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     
     //MARK: varaible that will passed
+    var fromReportedPage: Bool!
     var LessonSession: LessonSessions!
+    var reportedSession: SessionElement!
     
     
     //MARK: inner varaibles
@@ -65,6 +68,12 @@ class AddReviewViewController: UIViewController {
         overAlltextLbl.text = Constants.overAllAssessment
         generalAssessmentTextLbl.text = Constants.ratingGroup4Title
         noteTextLbl.text = Constants.note
+        for label in goodTextCollectionLbls {
+            label.text = Constants.good
+        }
+        for label in notGoodCollectionlbls {
+            label.text = Constants.notGood
+        }
         setUpStyleOfButtons()
         setUpNoteTextFieldUI()
         setUpSaveButtonUI()
@@ -114,7 +123,12 @@ class AddReviewViewController: UIViewController {
     
     //MARK: prepare intail Data
     private func setUpIntailData(){
-        studentDetails.setUpViewData(studentImage: LessonSession.booking?.student?.avatar ?? "", studentName: LessonSession.booking?.student?.name ?? "", packageType: LessonSession.booking?.preparePackageType() ?? "", lessonDate: LessonSession.getLessonDayAndTime(), lessonDuration: LessonSession.prepareLessonDuration())
+        if fromReportedPage {
+            studentDetails.setUpViewData(studentImage: reportedSession.student?.avatar ?? "", studentName: reportedSession.student?.name ?? "" , packageType:  reportedSession.booking?.preparePackageType() ?? "", lessonDate: reportedSession.getLessonDayAndTime(), lessonDuration: "-")
+        } else {
+            studentDetails.setUpViewData(studentImage: LessonSession.booking?.student?.avatar ?? "", studentName:  LessonSession.booking?.student?.name ?? "", packageType:  LessonSession.booking?.preparePackageType() ?? "", lessonDate: LessonSession.getLessonDayAndTime(), lessonDuration: LessonSession.prepareLessonDuration())
+           
+        }
     }
 
 }
@@ -171,9 +185,9 @@ extension AddReviewViewController {
     }
     
     private func bindingToViewModel(){
-        viewModel.input.parentIDValue.accept(LessonSession.booking?.parent?.id!)
-            viewModel.input.studentIDValue.accept(LessonSession.booking?.student?.id!)
-            viewModel.input.sessionIDValue.accept(LessonSession.id!)
+        viewModel.input.parentIDValue.accept(fromReportedPage ? reportedSession.parent?.id! : LessonSession.booking?.parent?.id!)
+        viewModel.input.studentIDValue.accept(fromReportedPage ? reportedSession.student?.id! : LessonSession.booking?.student?.id!)
+        viewModel.input.sessionIDValue.accept(fromReportedPage ? reportedSession.id! : LessonSession.id!)
             noteTextField.rx.text.orEmpty.bind(to: viewModel.input.notesTextBehavorail).disposed(by: bag)
         
     }
@@ -189,10 +203,18 @@ extension AddReviewViewController {
             case .hideLoading:
                 ProgressHUD.dismiss()
             case .success:
-                self.navigationController?.popToRootViewController(animated: true)
-                Banner.showSuccessBanner(message: Constants.addStudentReportSuccessfully)
-                // Post a notification to refresh the main agenda
-                NotificationCenter.default.post(name: .addReportSuccessfully, object: nil)
+                if fromReportedPage {
+                    self.navigationController?.popViewController(animated: true)
+                    Banner.showSuccessBanner(message: Constants.addStudentReportSuccessfully)
+                    // Post a notification to refresh the main agenda
+                    NotificationCenter.default.post(name: .addReportSuccessfullyFromReportPage, object: nil)
+                } else {
+                    self.navigationController?.popToRootViewController(animated: true)
+                    Banner.showSuccessBanner(message: Constants.addStudentReportSuccessfully)
+                    // Post a notification to refresh the main agenda
+                    NotificationCenter.default.post(name: .addReportSuccessfullyFromWorkAgenda, object: nil)
+                }
+               
             case .failure(let errorMessage ):
                 print("Error: \(errorMessage)")
                 if errorMessage == Constants.noInternetConnection || errorMessage == Constants.addAllStudentReportDetails {

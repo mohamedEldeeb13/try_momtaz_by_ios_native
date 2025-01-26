@@ -54,7 +54,7 @@ class WorkAgendaViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .updateLessonDateSuccessfully, object: nil)
         
         // Register for the lesson deleted notification
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .addReportSuccessfully, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshWorkAgenda), name: .addReportSuccessfullyFromWorkAgenda, object: nil)
     }
     private func removeNotificationObserver(){
         // Register for the lesson deleted notification
@@ -64,7 +64,7 @@ class WorkAgendaViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .updateLessonDateSuccessfully, object: nil)
         
         // Register for the lesson deleted notification
-        NotificationCenter.default.removeObserver(self, name: .addReportSuccessfully, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .addReportSuccessfullyFromWorkAgenda, object: nil)
     }
     
     //MARK: prepare intail UI
@@ -111,8 +111,14 @@ class WorkAgendaViewController: UIViewController {
         internetConnectivity = ConnectivityManager.connectivityInstance
         if internetConnectivity?.isConnectedToInternet() == true {
             noInternetView.isHidden = true
-            sessionsTableView.isHidden = false
-            noLessonsView.isHidden = false
+            // Use the most recent state of lessons
+            viewModel.output.sessionsPublisher
+                .observe(on: MainScheduler.instance) // ensure UI updates on main thread
+                .subscribe(onNext: { [weak self] sessions in
+                    // Update your UI here with the sessions data
+                    self?.noLessonsView.isHidden = !sessions.isEmpty
+                    self?.sessionsTableView.isHidden = sessions.isEmpty
+                }).disposed(by: bag)
         }else {
             noInternetView.isHidden = false
             sessionsTableView.isHidden = true
@@ -179,7 +185,6 @@ extension WorkAgendaViewController {
                 ProgressHUD.dismiss()
             case .success(let sessions):
                 self.noLessonsView.isHidden = !sessions.isEmpty
-                self.noInternetView.isHidden = true
                 self.sessionsTableView.isHidden = sessions.isEmpty
                 sessionsTableView.reloadData()
             case .failure(let error):

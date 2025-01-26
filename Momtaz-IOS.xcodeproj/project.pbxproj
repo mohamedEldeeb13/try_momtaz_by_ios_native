@@ -26,6 +26,10 @@
 		D342E33C2D2EB6850025EDFE /* StudentDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */; };
 		D342E33E2D2F62770025EDFE /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */; };
 		D342E3402D2F684A0025EDFE /* AddReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */; };
+		D356C07F2D463797004767FE /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D356C07E2D463797004767FE /* ReportTableViewCell.xib */; };
+		D356C0802D463797004767FE /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356C07D2D463797004767FE /* ReportTableViewCell.swift */; };
+		D356C0822D46426F004767FE /* ReportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356C0812D46426F004767FE /* ReportsResponse.swift */; };
+		D356C0842D468079004767FE /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356C0832D468079004767FE /* ReportsViewModel.swift */; };
 		D36599342D1E9BE40062B09C /* LessonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */; };
 		D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */; };
 		D36E516A2D145FFF007BECC7 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E51692D145FFF007BECC7 /* MainNavigationController.swift */; };
@@ -137,6 +141,10 @@
 		D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentDetailsView.xib; sourceTree = "<group>"; };
 		D342E33D2D2F62770025EDFE /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
 		D342E33F2D2F684A0025EDFE /* AddReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReportResponse.swift; sourceTree = "<group>"; };
+		D356C07D2D463797004767FE /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		D356C07E2D463797004767FE /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
+		D356C0812D46426F004767FE /* ReportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsResponse.swift; sourceTree = "<group>"; };
+		D356C0832D468079004767FE /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
 		D36599322D1E9BE40062B09C /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
 		D36599332D1E9BE40062B09C /* LessonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonTableViewCell.xib; sourceTree = "<group>"; };
 		D36E51692D145FFF007BECC7 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -274,6 +282,15 @@
 				D342E33B2D2EB6850025EDFE /* StudentDetailsView.xib */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		D356C07C2D463771004767FE /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				D356C07D2D463797004767FE /* ReportTableViewCell.swift */,
+				D356C07E2D463797004767FE /* ReportTableViewCell.xib */,
+			);
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 		D36599312D1E9BB20062B09C /* Custom Components */ = {
@@ -444,6 +461,7 @@
 				D3AA2E952D3F2C7100641025 /* TeacherBookingsResponse.swift */,
 				D32C2AFF2D4197ED004B6022 /* DeleteBookingResponse.swift */,
 				D37DD9E32D43E7D4006FF563 /* TeacherStudentsResponse.swift */,
+				D356C0812D46426F004767FE /* ReportsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -635,6 +653,7 @@
 		D3DC39E32D134EDB00E98447 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D356C07C2D463771004767FE /* Custom Components */,
 				D3DC39EB2D134F2700E98447 /* ReportsViewController.swift */,
 				D3DC39EC2D134F2700E98447 /* ReportsViewController.xib */,
 			);
@@ -644,6 +663,7 @@
 		D3DC39E42D134EE000E98447 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D356C0832D468079004767FE /* ReportsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -892,6 +912,7 @@
 				D3DB46A02D2B519F004C1DA8 /* ShowReviewViewController.xib in Resources */,
 				D3DB46AD2D2B628D004C1DA8 /* ChangeLessonDateViewController.xib in Resources */,
 				D37DD9E22D43E2CC006FF563 /* StudentTableViewCell.xib in Resources */,
+				D356C07F2D463797004767FE /* ReportTableViewCell.xib in Resources */,
 				D3DC39F12D134F3600E98447 /* ReservationsViewController.xib in Resources */,
 				D3DC39ED2D134F2700E98447 /* ReportsViewController.xib in Resources */,
 				D3DC39E92D134F0C00E98447 /* StudentsViewController.xib in Resources */,
@@ -984,7 +1005,9 @@
 				D32C2AFE2D4171DD004B6022 /* ReservationDetailsViewModel.swift in Sources */,
 				D3C17B2D2D10805A0018BDE5 /* NetworkManager.swift in Sources */,
 				D3AA2E9F2D3F63BB00641025 /* teacherBookingTableViewCell.swift in Sources */,
+				D356C0842D468079004767FE /* ReportsViewModel.swift in Sources */,
 				D3C17B352D10C2340018BDE5 /* LogInResponse.swift in Sources */,
+				D356C0802D463797004767FE /* ReportTableViewCell.swift in Sources */,
 				D36599352D1E9BE40062B09C /* LessonTableViewCell.swift in Sources */,
 				D3DC39F62D134F4400E98447 /* WorkAgendaViewController.swift in Sources */,
 				D342E3402D2F684A0025EDFE /* AddReportResponse.swift in Sources */,
@@ -1010,6 +1033,7 @@
 				D3DC39F22D134F3600E98447 /* ReservationsViewController.swift in Sources */,
 				D3C17B312D10807C0018BDE5 /* UserDefaults.swift in Sources */,
 				D3DB46B32D2B85B9004C1DA8 /* buttonExtentions.swift in Sources */,
+				D356C0822D46426F004767FE /* ReportsResponse.swift in Sources */,
 				D37DD9E12D43E2CC006FF563 /* StudentTableViewCell.swift in Sources */,
 				D3FA96B52D0119400058C8D1 /* Momtaz_IOS.xcdatamodeld in Sources */,
 				D3A01B032D05D891008AE4A0 /* ForgetPasswordViewController.swift in Sources */,

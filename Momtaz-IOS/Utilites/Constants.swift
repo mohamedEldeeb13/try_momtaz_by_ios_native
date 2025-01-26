@@ -155,6 +155,17 @@ class Constants{
     static let classRoom = "Classroom"
     static let notHaveStudents = "There are no students"
     
+    //MARK: reports page
+    static let reports = "Reports"
+    static let report = "Report"
+    static let reportsPageSubHeadText = "Create reports and send them to students and parents from one place."
+    static let totalReports = "Total Reports"
+    static let hasBeenSent = "Has been sent"
+    static let notSent = "Not sent"
+    static let pendingReports = "Pending reports"
+    static let noPendingReports = "No pending reports"
+    static let currentReports = "Current reports"
+    static let noCurrentReports = "no current reports"
     
     
 }

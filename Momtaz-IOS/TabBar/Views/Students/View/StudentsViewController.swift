@@ -78,7 +78,9 @@ extension StudentsViewController{
         
     }
     private func setUpIntailTableViewUI(){
-        teacherStudentsTableView.estimatedRowHeight = 120
+        teacherStudentsTableView.estimatedRowHeight = 110
+        teacherStudentsTableView.separatorStyle = .none
+        teacherStudentsTableView.clipsToBounds = true
         teacherStudentsTableView.delegate = self
         teacherStudentsTableView.dataSource = self
         
@@ -87,10 +89,16 @@ extension StudentsViewController{
     
     func showNoIntenetView(){
         internetConnectivity = ConnectivityManager.connectivityInstance
-        let isConnected = internetConnectivity?.isConnectedToInternet() ?? false
-            noInternetView.isHidden = isConnected
-            noStudentsView.isHidden = !isConnected
-            studentDetailsView.isHidden = !isConnected
+        if internetConnectivity?.isConnectedToInternet() == true {
+            noInternetView.isHidden = true
+            let hasStudents = (viewModel?.students?.data?.students?.isEmpty ?? true)
+            noStudentsView.isHidden = !hasStudents
+            studentDetailsView.isHidden = hasStudents
+        }else {
+            noInternetView.isHidden = false
+            noStudentsView.isHidden = true
+            studentDetailsView.isHidden = true
+        }
     }
 }
 
